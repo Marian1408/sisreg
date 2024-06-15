@@ -1,0 +1,228 @@
+/*
+ Personalized styles
+
+ - DataTables styles
+ - General styles
+ - Login page styles
+
+*/
+
+/* DataTables styles ------------------------------------------------------------------------------------------------ */
+
+
+/* Login styles */
+
+.sisreg-login-title {
+  text-shadow: 4px 4px 2px rgb(0 0 0);
+  font-weight: 500;
+  color: white;
+}
+
+.sisreg-login-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('views/resources/dist/img/backgrounds/background1.jpg');
+}
+
+.sisreg-login-card {
+  --webkit-box-shadow: -1px -1px 38px 14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -1px 38px 14px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -1px 38px 14px rgba(0, 0, 0, 0.75);
+}
+
+.go-to-catalog {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* General styles --------------------------------------------------------------------------------------------------- */
+
+.sisreg-card-outline {
+  border-top: 3px solid #062f1d !important;
+  height: 100%;
+}
+
+.sisreg-card-header {
+  background: #062f1d;
+  border-radius: 0px !important;
+}
+
+.sisreg-card-footer {
+  background: #062f1d linear-gradient(180deg, #062f1d, #305c49) repeat-x !important;
+  color: #fff;
+}
+
+.sisreg-card-title {
+  color:white;
+}
+
+.sisreg-form-help {
+  margin-top: 0.25rem;
+  font-size: .875em;
+  font-weight: normal;
+  color: var(--bs-secondary-color);
+}
+
+.sisreg-height {
+  height: 100%;
+}
+
+.sisreg-card-subtitle {
+  font-size: 1.09rem;
+}
+
+.sisreg-hr {
+  border-top: 1px solid #062f1d;
+}
+
+.sisreg-icon-page {
+  font-size: 35px;
+}
+
+/* Sidebar styles */
+
+.sisreg-sidebar-color {
+  background-color: #062f1d;
+}
+
+.sisreg-sidebar-logo {
+  padding-left: 0.3rem !important;
+}
+
+.sisreg-sidebar-logo-link {
+  height: 85px !important;
+}
+
+.sisreg-sidebar-logo img {
+  width: 4.0rem;
+}
+
+.sisreg-sidebar-user-panel {
+  margin-bottom: 0px !important;
+}
+
+a.sisreg-sidebar-name {
+  margin-top: -17px;
+  border-bottom: 0px !important;
+}
+
+p.sisreg-sidebar-name1 {
+  font-size: 23px;
+  margin-bottom: -3px !important;
+  margin-top: 3px;
+}
+
+p.sisreg-sidebar-name2 {
+  font-size: 20px;
+}
+
+.sisreg-sidebar-user-image {
+  padding-left: 0.3rem !important;
+}
+
+.sisreg-card-darkgreen {
+  background-color: #062f1d !important;
+}
+
+.sisreg-sidebar-user-image img {
+  width: 3.1rem;
+}
+
+a.sisreg-sidebar-name-role {
+  font-size: 16px;
+  margin-top: -19px;
+  margin-bottom: -15px;
+  border-bottom: 0px;
+}
+
+
+.card-mb0 {
+  margin-bottom: 0px;
+}
+
+.content {
+  background: #f4f6f9;
+}
+
+li.home {
+  margin-top: 5px;
+  margin-left: 40px;
+  list-style: disc;
+}
+
+.icon-page {
+  font-size: 35px;
+}
+
+.silence-form {
+  font-style: italic;
+  text-align: right;
+  margin-top: -31px;
+  margin-bottom: 5px;
+}
+
+.form-help {
+  margin-top: 0.25rem;
+  font-size: .875em;
+  color: var(--bs-secondary-color);
+}
+
+/* Login page styles ------------------------------------------------------------------------------------------------ */
+
+
+/* About Page */
+
+.blockquote-about {
+  font-size: 1.22rem;
+  border-left: 0.7rem solid #db2e6d;
+  font-style: italic;
+  margin: 0px;
+}
+
+/* Card Styles */
+
+.card-title {
+  float: left;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+p.card-text {
+  font-size: 1.11rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.text-sm p.card-text {
+  font-size: 1.0rem;
+}
+
+ul.card-text {
+  font-size: 1.15rem;
+  list-style: disc;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+.text-sm ul.card-text {
+  font-size: 1.0rem;
+}
+
+h5.card-text {
+  font-size: 1.25rem;
+}
+
+h5.subtitle-section {
+  font-size: 1.15rem;
+}
+
+.text-sm h5.card-text {
+  font-size: 1.15rem;
+}
+
+.card-help.card-outline {
+  border-top: 3px solid #117a8b;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
