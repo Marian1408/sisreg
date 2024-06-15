@@ -34,12 +34,6 @@
 }
 
 /* General styles --------------------------------------------------------------------------------------------------- */
-
-.sisreg-card-outline {
-  border-top: 3px solid #062f1d !important;
-  height: 100%;
-}
-
 .sisreg-card-header {
   background: #062f1d;
   border-radius: 0px !important;
@@ -225,4 +219,10 @@ h5.subtitle-section {
 
 .mb-10 {
   margin-bottom: 10px;
+}
+
+
+/* Overridden styles */
+.card-primary.card-outline {
+  border-top: 3px solid #062f1d !important;
 }

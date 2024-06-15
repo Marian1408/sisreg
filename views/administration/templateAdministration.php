@@ -75,7 +75,7 @@
   <?php include "modules/sidebar.php"; ?>
 
   <!-- Content Wrapper -->
-  <div class="content-wrapper  background-colpos" style="height: auto;">
+  <div class="content-wrapper" style="height: auto;">
     
     <?php
       $templateName = 'administration';
