@@ -1502,17 +1502,8 @@
             type="submit"
             id="buttonAddNew"
             name="buttonAddNew"
-            title="Añadir evento">
-      Añadir evento
-    </button>
-
-    <button type="button"
-            class="btn btn-primary btn-flat cltm-tools-buttons"
-            title="Añadir evento"
-            id="addNewEventButton"
-            name="addNewEventButton"
             disabled
-            onclick="addEvent()">
+            title="Añadir evento">
       <i class="fa-solid fa-floppy-disk"></i> Añadir evento
     </button>
 
@@ -1549,7 +1540,7 @@
   // jQuery Validation configuration
   $(function () {
 
-    let addNewEvent = $('#addNewEvent').validate({
+    let addNewEventForm = $('#addNewEventForm').validate({
       rules: {
         inputNameOfActivity: {
           required: true,
@@ -1566,16 +1557,16 @@
         selectModality: {
           required: true,
         },
-        inputTechnologyManagerManager: {
+        selectTechnologyManagerManager: {
           required: true,
         },
-        inputManagerSocialService: {
+        selectManagerSocialService: {
           required: true,
         },
         inputEventRequester: {
           required: true,
         },
-        inputPortfolioManager: {
+        selectPortfolioManager: {
           required: true,
         },
         inputNameMagistrate: {
@@ -1643,16 +1634,16 @@
         selectModality: {
           required: "El campo es obligatorio"
         },
-        inputTechnologyManagerManager: {
+        selectTechnologyManagerManager: {
           required: "El campo es obligatorio"
         },
-        inputManagerSocialService: {
+        selectManagerSocialService: {
           required: "El campo es obligatorio"
         },
         inputEventRequester: {
           required: "El campo es obligatorio"
         },
-        inputPortfolioManager: {
+        selectPortfolioManager: {
           required: "El campo es obligatorio"
         },
         inputNameMagistrate: {
@@ -1717,6 +1708,28 @@
 
     });
   });
+
+
+  // Form event function
+  $('#addNewEventForm').on('blur keyup change input', function (event) {
+    validateForm('#addNewEventForm');
+  });
+
+
+  /**
+   * Form validation
+   *
+   * @param id
+   */
+  function validateForm(id) {
+    let submitting = $("#buttonAddNew");
+    let valid = $(id).validate().checkForm();
+    if (valid) {
+      submitting.removeAttr("disabled");
+    } else {
+      submitting.attr("disabled", "disabled");
+    }
+  }
 
   // Send POST data with Ajax (Pending)
   $("#addNewEventForm").on('submit', function (e) {
