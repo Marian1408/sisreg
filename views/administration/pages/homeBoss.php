@@ -11,18 +11,18 @@
    */
 ?>
 
-<!-- Header /-->
-<div class="content-header">
+<!-- Image logo -->
+<div style=" text-align: center;">
+  <img src="views/resources/dist/img/logo_sisreg_.png" alt="Photo">
+</div>
+
+
+<!-- Header content -->
+<section class="content-header">
   <div class="container-fluid">
-
-    <!-- Image logo -->
-    <div style="margin: 20px; text-align: center;">
-      <img src="views/resources/dist/img/logo_sisreg_.png" alt="Photo">
-    </div>
-
     <div class="row mb-2">
 
-      <!-- Title /-->
+      <!-- Title -->
       <div class="col-sm-6">
         <h1>Bienvenido a la administración:
           <b><?php echo $_SESSION['user_name'] . ' ' . $_SESSION['user_lastname']; ?></b></h1>
@@ -37,70 +37,232 @@
 
     </div>
   </div>
-</div>
+</section>
 
-<!-- Content /-->
-<div class="content">
+<!-- Main content -->
+<section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-12">
 
-        <div class="card card-info card-outline sisreg-card-outline">
+        <!-- Content -->
+        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
 
-          <!-- Header card /-->
+          <!-- Card header -->
           <div class="card-header">
-            <h5 class="card-title">Subtítulo 1</h5 class="card-title">
 
-            <!-- Card buttons -->
+            <!-- Subtitle -->
+            <h5 class="card-title" style="font-size: 1.25rem;">
+              <i class="fa-solid fa-chart-area"></i>
+              <b>Estadísticas</b>
+            </h5>
+
+            <!-- Card tools -->
             <div class="card-tools">
 
-              <!-- Minimize button -->
-              <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                      title="<?php echo 'Minimizar'; ?>">
-                <i class="fas fa-minus"></i>
+              <!-- Refresh button -->
+              <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
+                      data-source-selector="#card-refresh-content" data-load-on-init="false"
+                      title="Actualizar">
+                <i class="fas fa-sync-alt"></i>
               </button>
 
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
-                      title="<?php echo 'Maximizar'; ?>">
-                <i class="fas fa-expand"></i>
+                      title="Maximizar"><i class="fas fa-expand"></i>
               </button>
 
             </div>
 
           </div>
 
-          <!-- Body card -->
+          <!-- Card body /-->
           <div class="card-body">
+            
+            <div class="row">
+              
+              <div class="col-6">
+                <div class="card">
 
-            <h5 class="card-text">Subtitle 2</h5>
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      Estadicticas de evaluación para:
+                      <a href="javascript:void(0);">Reportes De Eventos</a>
+                    </div>
+                  </div>
 
-            <p class="card-text">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-              of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-              evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">Responsables Tecnólogia (Directivo)</span>
+                        <span>Numero de Eventos</span>
+                      </p>
+                      <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> #
+                    </span>
+                        <span class="text-muted">Desde los últimos dos meses</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
 
-            <hr>
-            <p class="card-text">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-              of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-              evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
+                    <div class="position-relative mb-4">
+                      <canvas id="sales-chart" height="200"></canvas>
+                    </div>
 
+                    <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-olive"></i>Este mes
+                  </span>
+                      <span>
+                    <i class="fas fa-square text-gray"></i>Mes pasado
+                  </span>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card">
+
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      Estadicticas de evaluación para:
+                      <a href="javascript:void(0);">Reportes De Eventos</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">Responsables Tecnólogia (Servicio Social)</span>
+                        <span>Numero de Eventos</span>
+                      </p>
+                      <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> #
+                    </span>
+                        <span class="text-muted">Desde los últimos dos meses</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+
+                    <div class="position-relative mb-4">
+                      <canvas id="sales-chart1" height="200"></canvas>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-orange"></i>Este mes
+                  </span>
+                      <span>
+                    <i class="fas fa-square text-gray"></i>Mes pasado
+                  </span>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card">
+
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      Estadicticas de evaluación para:
+                      <a href="javascript:void(0);">Reportes De Eventos</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">Responsables Evento</span>
+                        <span>Numero de Eventos</span>
+                      </p>
+                      <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> #
+                    </span>
+                        <span class="text-muted">Desde los últimos dos meses</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+
+                    <div class="position-relative mb-4">
+                      <canvas id="sales-chart2" height="200"></canvas>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-primary"></i>Este mes
+                  </span>
+                      <span>
+                    <i class="fas fa-square text-gray"></i>Mes pasado
+                  </span>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card">
+
+                  <div class="card-header border-0">
+                    <div class="d-flex justify-content-between">
+                      Estadicticas de evaluacion para :
+                      <a href="javascript:void(0);">Reportes De Eventos</a>
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">Responsables De Carpeta</span>
+                        <span>Eventos Realizados</span>
+                      </p>
+                      <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> #
+                    </span>
+                        <span class="text-muted">Desde los últimos dos meses</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+
+                    <div class="position-relative mb-4">
+                      <canvas id="sales-chart3" height="200"></canvas>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-warning"></i>Este mes
+                  </span>
+                      <span>
+                    <i class="fas fa-square text-gray"></i>Mes pasado
+                  </span>
+
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
 
           </div>
 
-
           <!-- Card footer -->
           <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
-            <em>Ver. <?php echo SYSTEM_VERSION; ?></em>
+            <em><?php echo SYSTEM_FULL_NAME; ?> <?php echo SYSTEM_VERSION; ?></em>
           </div>
 
         </div>
@@ -108,8 +270,19 @@
       </div>
     </div>
   </div>
-</div>
+
+</section>
 
 
-
-
+<!-- jQuery -->
+<script src="views/resources/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="views/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="views/resources/dist/js/adminlte.js"></script>
+<!-- OPTIONAL SCRIPTS -->
+<script src="views/resources/plugins/chart.js/Chart.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="views/resources/dist/js/demo.js"></script>
+<!-- Statistics /-->
+<script src="views/resources/dist/js/statistics.js"></script>
