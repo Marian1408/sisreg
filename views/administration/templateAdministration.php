@@ -114,15 +114,8 @@
 <script src="views/resources/plugins/codemirror/mode/xml/xml.js"></script>
 <script src="views/resources/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
-
-<!-- OPTIONAL SCRIPTS
-<script src="views/resources/plugins/chart.js/Chart.min.js"></script>-->
-
 <!-- AdminLTE for demo purposes -->
 <script src="views/resources/dist/js/demo.js"></script>
-
-<!-- AdminLTE dashboard demo (This is only for demo purposes)
-<script src="views/resources/dist/js/pages/dashboard3.js"></script>-->
 
 <!-- DataTables  & Plugins -->
 <script src="views/resources/plugins/datatables/jquery.dataTables.min.js"></script>

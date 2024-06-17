@@ -86,7 +86,7 @@
 
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      Estadicticas de evaluación para:
+                      Estadísticas de evaluación para:
                       <a href="javascript:void(0);">Reportes De Eventos</a>
                     </div>
                   </div>
@@ -101,13 +101,12 @@
                     <span class="text-success">
                       <i class="fas fa-arrow-up"></i> #
                     </span>
-                        <span class="text-muted">Desde los últimos dos meses</span>
+                        <span class="text-muted">Últimos dos meses</span>
                       </p>
                     </div>
-                    <!-- /.d-flex -->
-
+                 
                     <div class="position-relative mb-4">
-                      <canvas id="sales-chart" height="200"></canvas>
+                      <canvas id="events-total1" height="200"></canvas>
                     </div>
 
                     <div class="d-flex flex-row justify-content-end">
@@ -130,7 +129,7 @@
 
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      Estadicticas de evaluación para:
+                      Estadísticas de evaluación para:
                       <a href="javascript:void(0);">Reportes De Eventos</a>
                     </div>
                   </div>
@@ -145,13 +144,13 @@
                     <span class="text-success">
                       <i class="fas fa-arrow-up"></i> #
                     </span>
-                        <span class="text-muted">Desde los últimos dos meses</span>
+                        <span class="text-muted">Últimos dos meses</span>
                       </p>
                     </div>
                     <!-- /.d-flex -->
 
                     <div class="position-relative mb-4">
-                      <canvas id="sales-chart1" height="200"></canvas>
+                      <canvas id="events-total2" height="200"></canvas>
                     </div>
 
                     <div class="d-flex flex-row justify-content-end">
@@ -174,7 +173,7 @@
 
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      Estadicticas de evaluación para:
+                      Estadísticas de evaluación para:
                       <a href="javascript:void(0);">Reportes De Eventos</a>
                     </div>
                   </div>
@@ -189,13 +188,13 @@
                     <span class="text-success">
                       <i class="fas fa-arrow-up"></i> #
                     </span>
-                        <span class="text-muted">Desde los últimos dos meses</span>
+                        <span class="text-muted">Últimos dos meses</span>
                       </p>
                     </div>
                     <!-- /.d-flex -->
 
                     <div class="position-relative mb-4">
-                      <canvas id="sales-chart2" height="200"></canvas>
+                      <canvas id="events-total3" height="200"></canvas>
                     </div>
 
                     <div class="d-flex flex-row justify-content-end">
@@ -218,7 +217,7 @@
 
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      Estadicticas de evaluacion para :
+                      Estadísticas de evaluacion para :
                       <a href="javascript:void(0);">Reportes De Eventos</a>
                     </div>
                   </div>
@@ -233,13 +232,13 @@
                     <span class="text-success">
                       <i class="fas fa-arrow-up"></i> #
                     </span>
-                        <span class="text-muted">Desde los últimos dos meses</span>
+                        <span class="text-muted">Últimos dos meses</span>
                       </p>
                     </div>
                     <!-- /.d-flex -->
 
                     <div class="position-relative mb-4">
-                      <canvas id="sales-chart3" height="200"></canvas>
+                      <canvas id="events-total4" height="200"></canvas>
                     </div>
 
                     <div class="d-flex flex-row justify-content-end">
@@ -273,16 +272,9 @@
 
 </section>
 
-
 <!-- jQuery -->
 <script src="views/resources/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="views/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE -->
-<script src="views/resources/dist/js/adminlte.js"></script>
-<!-- OPTIONAL SCRIPTS -->
+<!-- Chart /-->
 <script src="views/resources/plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="views/resources/dist/js/demo.js"></script>
 <!-- Statistics /-->
 <script src="views/resources/dist/js/statistics.js"></script>
