@@ -226,3 +226,12 @@ h5.subtitle-section {
 .card-primary.card-outline {
   border-top: 3px solid #062f1d !important;
 }
+
+.callout a {
+  color: #0f3826 !important;
+  text-decoration: underline;
+}
+
+.callout a:hover {
+  color: #458d6e !important;
+}

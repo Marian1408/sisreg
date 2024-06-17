@@ -1,108 +1,95 @@
 <?php
   /**
    * -------------------------------------------------------------------------------------------------------------------
-   * Project name:        SYSREG
+   * Project name:        SISREG
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           View file
-   * File description:    This file show the admin screen.
+   * File description:    This file show "Presidium" craft screen.
    * Package:             Views
    * -------------------------------------------------------------------------------------------------------------------
    */
+
 ?>
 
-<!-- Header /-->
-<div class="content-header">
+<!-- Header content -->
+<section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
 
-      <!-- Title /-->
+      <!-- Title -->
       <div class="col-sm-6">
-        <h1>Invitación a dar palabras</h1>
+        <h1><b>Oficio</b></h1>
       </div>
 
-      <!-- Icon /-->
+      <!-- Icon page -->
       <div class="col-sm-6 icon-page">
         <ol class="breadcrumb float-sm-right">
-          <i class="fa fa-circle-info"></i>
+          <i class="fa-solid fa-file-signature"></i>
         </ol>
       </div>
 
     </div>
   </div>
-</div>
+</section>
 
-<!-- Content /-->
-<div class="content">
+<!-- Main content -->
+<section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-12">
 
-        <div class="card card-info card-outline">
+        <!-- Content -->
+        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
 
-          <!-- Header card /-->
+          <!-- Card header -->
           <div class="card-header">
-            <h5 class="card-title">Subtítulo</h5 class="card-title">
 
-            <!-- Card buttons -->
+            <!-- Subtitle -->
+            <h5 class="card-title" style="font-size: 1.25rem;">
+              <i class="fa-solid fa-file-signature"></i>
+              Oficio de Presidium</h5>
+
+            <!-- Card tools -->
             <div class="card-tools">
 
               <!-- Minimize button -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                      title="<?php echo 'Minimizar'; ?>">
+                      title="Minimizar">
                 <i class="fas fa-minus"></i>
+              </button>
+
+              <!-- Refresh button -->
+              <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
+                      data-source-selector="#card-refresh-content" data-load-on-init="false" onclick="resetCraft()"
+                      title="Actualizar">
+                <i class="fas fa-sync-alt"></i>
               </button>
 
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
-                      title="<?php echo 'Maximizar'; ?>">
-                <i class="fas fa-expand"></i>
+                      title="Maximizar"><i class="fas fa-expand"></i>
               </button>
 
             </div>
 
           </div>
 
-          <!-- Body card -->
+          <!-- Card body (table) -->
           <div class="card-body">
-
-
-            <p class="card-text">
-            Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso para presentar la información relevante. 
-            Puedes adaptarlo según las necesidades específicas de tu comunicación oficial.
+            <p>Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso
+              para presentar la información relevante. Puedes adaptarlo según las necesidades específicas de tu
+              comunicación oficial.
             </p>
 
             <hr>
-      
-          </div>
 
-
-          <!-- Card footer -->
-          <div class="card-footer bg-gradient-info text-right">
-            <em>Ver. <?php echo SYSTEM_VERSION; ?></em>
-          </div>
-
-
-        </div>
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-outline card-info">
-                <div class="card-header">
-                  <h3 class="card-title">
-                  Invitación a dar palabras
-                  </h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-             <textarea id="summernote">
+            <textarea id="summernote">
                 <div style="padding-left:80px;padding-right:80px;">
                     <div style="padding:30px;">
                         <div class="row">
                             <div class="col-12" style="text-align:left;">
-                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sysreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
+                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sisreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
                             </div>
                         </div>
                         <p style="margin:0cm;text-align:right;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span></strong></span></p>
@@ -124,15 +111,15 @@
                         <p style="line-height:12.0pt;margin:0cm -21.25pt 0cm -7.1pt;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;"></span></strong></span></p>
                         <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span>
                             
-                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"> <span lang="ES" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	El Poder Judicial del Estado mediante la Escuela Judicial del Estado de Veracruz, llevará a cabo la capacitación en la<strong>modalidad ____________ </strong>denominada: “_____________________________”, la cual se efectuará el _____<strong>de</strong> ________ del año en curso,<strong>a las </strong> __:__ <strong>horas</strong>,realizándose y transmitiéndose desde el Auditorio “C” de esta Ciudad Judicial a través de la aplicación Videoconferencia Telmex.
+                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"> <span lang="ES" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El Poder Judicial del Estado a través de la Escuela Judicial del Estado de Veracruz, derivado de la reciente creación y próxima entrada en función de los juzgados en línea en materia civil, familiar, mercantil y laboral, llevarán a cabo la capacitación en la <strong>modalidad presencial y virtual </strong> denominada:"____________", que se realizará a través de una conferencia impartida por juezas de los juzgados en línea a fin de explicar los proceso que son competencia de los mismos; así mismo se llevará a cabo la reproducción de un video tutorial a cargo de personal de la Subdirección de Tecnologías de la Información, quienes explicarán brevemente el manejo del sistema, dicha capacitación se efectuará el 26 de marzo del año en curso, a las 12:00 horas, realizándose y transmitiéndose desde el Auditorio “C” de esta Ciudad Judicial a través de la aplicación Videoconferencia Telmex.
 
                             </span></p><br><br>
-                                                        <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span>Dicha capacitación tiene como objeto: __________________________________________________
+                                                        <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:13.0pt;"></span>Por lo anterior, para efecto de dar mayor realce a esta conferencia, me permito extenderle una <strong>cordial invitación para dar unas palabras de bienvenida, </strong> en el Auditorio “C” del Edificio “C” de la Ciudad Judicial de Xalapa a las__________horas. Anexo programa del evento.
 
-                            </span></p> <br><br>
-                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span>&nbsp;</span><span lang="ES" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	Por lo anterior, para efecto de dar mayor realce a esta conferencia, me permito extenderle una <strong>cordial invitación para dar unas palabras de bienvenida, </strong> en el Auditorio “C” del Edificio “C” de la Ciudad Judicial de Xalapa <strong>a las 12:00 horas</strong>Anexo programa del evento.&nbsp;</span></span><a target="_blank" rel="noopener noreferrer" href="https://sistemas.pjeveracruz.gob.mx/EscuelaJudicial/login"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span lang="ES" dir="ltr"><strong><u style="color: black;"></u></strong></span></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span lang="ES" dir="ltr">&nbsp;&nbsp; <u></u>  <strong><u></u></u></strong>&nbsp; </span><a name="_Hlk94622025"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></p>
-                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p><br><br>
-                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span lang="ES" dir="ltr">Sin otro particular y en espera de su cordial respuesta, quedo de usted como su atenta y segura servidora</span></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p><br><br><br>
+                            </span></p> <br>
+                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span>&nbsp;</span><span lang="ES" dir="ltr">&nbsp;&nbsp;&nbsp;&nbsp;</strong> &nbsp;</span></span><a target="_blank" rel="noopener noreferrer" href="https://sistemas.pjeveracruz.gob.mx/EscuelaJudicial/login"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span lang="ES" dir="ltr><strong><u style="color: black;"></u></strong></span></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span lang="ES" dir="ltr">&nbsp;&nbsp; <u></u>  <strong><u></u></u></strong>&nbsp; </span><a name="_Hlk94622025"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></p>
+                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p><br><br>.
+                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span lang="ES" dir="ltr"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sin otro particular y en espera de su cordial respuesta, quedo de usted como su atenta y segura servidora.</span></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p><br><br><br>
 
 
                         <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;" lang="ES"></span></strong></span></p>
@@ -213,55 +200,34 @@
 
 
             </textarea>
-                
-                
-                </div>
-                <div class="card-footer">
-                
-                </div>
-              </div>
-            </div>
-            <!-- /.col-->
+
           </div>
 
 
-          <!-- ./row -->
-          <div class="row">
-           
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body p-0">
-              
-                </div>
-                <div class="card-footer">
-                  
-                </div>
-              </div>
-            </div>
-            <!-- /.col-->
+          <!-- Card footer -->
+          <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
+            <em><?php echo SYSTEM_FULL_NAME; ?><?php echo SYSTEM_VERSION; ?></em>
           </div>
-          <!-- ./row -->
-        </section>
+
+        </div>
 
       </div>
     </div>
   </div>
-</div>
 
+</section>
 
 <!-- jQuery -->
 <script src="views/resources/plugins/jquery/jquery.min.js"></script>
-
-
-<!-- Sweet Alert -->
-<script src="views/resources/plugins/sweetalert2/sweetalert2.11.7.31.js"></script>
-
 
 <!-- Page specific script -->
 <script>
   $(document).ready(function () {
     // Summernote
     $('#summernote').summernote({
+      fontNames: ['Arial Narrow'],
+      addDefaultFonts: false,
+      lang: 'es-ES',
       toolbar: [
         ['style', ['style']],
         ['font', ['bold', 'underline', 'clear']],
@@ -270,24 +236,40 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
+        ['undo', ['undo']],
+        ['redo', ['redo']],
+        ['mybutton', ['refresh']],
         ['misc', ['print']]
+
       ],
+      buttons: {
+        refresh: refreshButton,
+      },
       print: {
         'stylesheetUrl': 'views/administration/pages/craft1.css',
       }
     });
 
-    // CodeMirror
-    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-      mode: "htmlmixed",
-      theme: "monokai"
-    });
   });
 
+  let refreshButton = function (context) {
+    let ui = $.summernote.ui;
+
+    // create button
+    let button = ui.button({
+      contents: '<i class="fa-solid fa-arrows-rotate"/> Reiniciar',
+      tooltip: 'Reiniciar oficio',
+      click: function () {
+        // invoke insertText method with 'refresh' on editor module.
+        resetCraft();
+      }
+    });
+
+    return button.render();   // return button as jquery object
+  }
+
+  function resetCraft() {
+    location.reload();
+  }
 
 </script>
-
-
-
-
-

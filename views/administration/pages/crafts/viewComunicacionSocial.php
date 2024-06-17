@@ -1,108 +1,95 @@
-<span?php
+<?php
   /**
    * -------------------------------------------------------------------------------------------------------------------
-   * Project name:        SYSREG
+   * Project name:        SISREG
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           View file
-   * File description:    This file show the admin screen.
+   * File description:    This file show "Comunicación Social" craft screen.
    * Package:             Views
    * -------------------------------------------------------------------------------------------------------------------
    */
+
 ?>
 
-<!-- Header /-->
-<div class="content-header">
+<!-- Header content -->
+<section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
 
-      <!-- Title /-->
+      <!-- Title -->
       <div class="col-sm-6">
-        <h1>Comunicación Social</h1>
+        <h1><b>Oficio</b></h1>
       </div>
 
-      <!-- Icon /-->
+      <!-- Icon page -->
       <div class="col-sm-6 icon-page">
         <ol class="breadcrumb float-sm-right">
-          <i class="fa fa-circle-info"></i>
+          <i class="fa-solid fa-file-signature"></i>
         </ol>
       </div>
 
     </div>
   </div>
-</div>
+</section>
 
-<!-- Content /-->
-<div class="content">
+<!-- Main content -->
+<section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-12">
 
-        <div class="card card-info card-outline">
+        <!-- Content -->
+        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
 
-          <!-- Header card /-->
+          <!-- Card header -->
           <div class="card-header">
-            <h5 class="card-title">Acerca del oficio</h5 class="card-title">
 
-            <!-- Card buttons -->
+            <!-- Subtitle -->
+            <h5 class="card-title" style="font-size: 1.25rem;">
+              <i class="fa-solid fa-file-signature"></i>
+              Oficio de Comunicación Social</h5>
+
+            <!-- Card tools -->
             <div class="card-tools">
 
               <!-- Minimize button -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                      title="<?php echo 'Minimizar'; ?>">
+                      title="Minimizar">
                 <i class="fas fa-minus"></i>
+              </button>
+
+              <!-- Refresh button -->
+              <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
+                      data-source-selector="#card-refresh-content" data-load-on-init="false" onclick="resetCraft()"
+                      title="Actualizar">
+                <i class="fas fa-sync-alt"></i>
               </button>
 
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
-                      title="<?php echo 'Maximizar'; ?>">
-                <i class="fas fa-expand"></i>
+                      title="Maximizar"><i class="fas fa-expand"></i>
               </button>
 
             </div>
 
           </div>
 
-          <!-- Body card -->
+          <!-- Card body (table) -->
           <div class="card-body">
-
-            <h5 class="card-text">Descripción</h5>
-
-            <p class="card-text">
-            Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso para presentar la información relevante. 
-            Puedes adaptarlo según las necesidades específicas de tu comunicación oficial.
+            <p>Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso
+              para presentar la información relevante. Puedes adaptarlo según las necesidades específicas de tu
+              comunicación oficial.
             </p>
 
             <hr>
-          </div>
 
-
-          <!-- Card footer -->
-          <div class="card-footer bg-gradient-info text-right">
-            <em>Ver. <?php echo SYSTEM_VERSION; ?></em>
-          </div>
-
-
-        </div>
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-outline card-info">
-                <div class="card-header">
-                  <h3 class="card-title">
-                  Comunicación Social
-                  </h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
             <textarea id="summernote">
                 <div style="padding-left:80px;padding-right:80px;">
                     <div style="padding:30px;">
                         <div class="row">
                             <div class="col-12" style="text-align:left;">
-                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sysreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
+                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sisreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
                             </div>
                         </div>
                         <p style="margin:0cm;text-align:right;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span></strong></span></p>
@@ -129,7 +116,7 @@
                         <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span>
                           <br><br><br>
 
-                          <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span lang="ES" dir="ltr">El <span lang="ES" dir="ltr">Por este medio, me permito solicitar su valiosa intervención, a efecto de que gire instrucciones a quien corresponda, a fin de que se <u> cintillo, cartel para difusión en redes sociales, banner para la página del Poder Judicial, la toma de fotografías y se habilite Facebook</u> para el evento que a continuación se describe:  <br><br>&nbsp;</strong></span></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"> </span><br style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"> 
+                          <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span lang="ES" dir="ltr">El <span lang="ES" dir="ltr">Por este medio, me permito solicitar su valiosa intervención, a efecto de que gire instrucciones a quien corresponda, a fin de que se <u> cintillo, cartel para difusión en redes sociales, banner para la página del Poder Judicial, la toma de fotografías y se habilite Facebook</u> para el evento que a continuación se describe:  <br><br>&nbsp;</strong></span></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"> </span><br style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;">
                             <br>  <strong>Nombre del evento:</strong> __________________________________ <br> <br>
 
                               <strong>Ponente:</strong> ___________________________________________. <br><br>
@@ -246,59 +233,34 @@
 
 
             </textarea>
-                
-                
-                </div>
-                
-              </div>
-            </div>
-            <!-- /.col-->
+            
           </div>
 
 
-          <!-- ./row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-outline card-info">
-                
-                <!-- /.card-header -->
-                <div class="card-body p-0">
-              
-                </div>
-                
-              </div>
-            </div>
-            <!-- /.col-->
+          <!-- Card footer -->
+          <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
+            <em><?php echo SYSTEM_FULL_NAME; ?><?php echo SYSTEM_VERSION; ?></em>
           </div>
-          <!-- ./row -->
-        </section>
+
+        </div>
 
       </div>
     </div>
   </div>
-</div>
-<div id="editor">
-    <p>This is the editor content.</p>
-</div>
-<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace( 'editor' );
-</script>
+
+</section>
 
 <!-- jQuery -->
 <script src="views/resources/plugins/jquery/jquery.min.js"></script>
-
-
-<!-- Sweet Alert -->
-<script src="views/resources/plugins/sweetalert2/sweetalert2.11.7.31.js"></script>
-
-
 
 <!-- Page specific script -->
 <script>
   $(document).ready(function () {
     // Summernote
     $('#summernote').summernote({
+      fontNames: ['Arial Narrow'],
+      addDefaultFonts: false,
+      lang: 'es-ES',
       toolbar: [
         ['style', ['style']],
         ['font', ['bold', 'underline', 'clear']],
@@ -307,24 +269,40 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
+        ['undo', ['undo']],
+        ['redo', ['redo']],
+        ['mybutton', ['refresh']],
         ['misc', ['print']]
+        
       ],
+      buttons: {
+        refresh: refreshButton,
+      },
       print: {
         'stylesheetUrl': 'views/administration/pages/craft1.css',
       }
     });
 
-    // CodeMirror
-    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-      mode: "htmlmixed",
-      theme: "monokai"
-    });
   });
 
+  let refreshButton = function (context) {
+    let ui = $.summernote.ui;
 
+    // create button
+    let button = ui.button({
+      contents: '<i class="fa-solid fa-arrows-rotate"/> Reiniciar',
+      tooltip: 'Reiniciar oficio',
+      click: function () {
+        // invoke insertText method with 'refresh' on editor module.
+        resetCraft();
+      }
+    });
+
+    return button.render();   // return button as jquery object
+  }
+
+  function resetCraft(){
+    location.reload();
+  }
+  
 </script>
-
-
-
-
-

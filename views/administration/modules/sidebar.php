@@ -175,7 +175,7 @@
         <!-- Craft options ------------------------------------------------------------------------------------------ -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'event'); ?>">
           <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'event') ?> ">
-            <i class="nav-icon fas fa-solid fa-file-lines"></i>
+            <i class="nav-icon fas fa-solid fa-file-signature"></i>
             <p>
               <?php echo 'Oficios'; ?>
               <i class="right fas fa-angle-left"></i>
@@ -184,95 +184,16 @@
           <ul class="nav nav-treeview">
 
             
-            <!-- Crafts options -->
-            
-            
+            <!-- Crafts /-->
             <li class="nav-item">
-              <a href="comunicacionSocial"
+              <a href="craftsList"
                  class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Comunicación Social'; ?></p>
+                <p><?php echo 'Lista de oficios'; ?></p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a href="espacioDeEstacionamiento"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Espacio de estacionamiento'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="invitacionForaneos"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Invitación foráneos'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="invitacionPresencial"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Invitación presencial'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="invitacionPresencialYvirtual"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Invitación presencial y virtual'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="presidenta"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Presidenta'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="presidium"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Presidium'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="presidiumInvitacionAdarPalabrasSintesisCurricular"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Presidium invitación a dar palabras...'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="presidiumInvitacionDarPalabras"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Presidium invitación a dar palabras'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="presidiumSoloAcompañar"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Presidium solo acompañar'; ?></p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="tecnologia"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p><?php echo 'Tecnología'; ?></p>
-              </a>
+           
             </li>
 
           </ul>

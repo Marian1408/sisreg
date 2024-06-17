@@ -1,108 +1,95 @@
-<span?php
+<?php
   /**
    * -------------------------------------------------------------------------------------------------------------------
-   * Project name:        SYSREG
+   * Project name:        SISREG
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           View file
-   * File description:    This file show the admin screen.
+   * File description:    This file show "Espacio de estacionamiento" craft screen.
    * Package:             Views
    * -------------------------------------------------------------------------------------------------------------------
    */
+
 ?>
 
-<!-- Header /-->
-<div class="content-header">
+<!-- Header content -->
+<section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
 
-      <!-- Title /-->
+      <!-- Title -->
       <div class="col-sm-6">
-        <h1> Tecnólogia</h1>
+        <h1><b>Oficio</b></h1>
       </div>
 
-      <!-- Icon /-->
+      <!-- Icon page -->
       <div class="col-sm-6 icon-page">
         <ol class="breadcrumb float-sm-right">
-          <i class="fa fa-circle-info"></i>
+          <i class="fa-solid fa-file-signature"></i>
         </ol>
       </div>
 
     </div>
   </div>
-</div>
+</section>
 
-<!-- Content /-->
-<div class="content">
+<!-- Main content -->
+<section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-12">
 
-        <div class="card card-info card-outline">
+        <!-- Content -->
+        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
 
-          <!-- Header card /-->
+          <!-- Card header -->
           <div class="card-header">
-            <h5 class="card-title">Acerca del oficio</h5 class="card-title">
 
-            <!-- Card buttons -->
+            <!-- Subtitle -->
+            <h5 class="card-title" style="font-size: 1.25rem;">
+              <i class="fa-solid fa-file-signature"></i>
+              Oficio de Espacio de Estacionamiento</h5>
+
+            <!-- Card tools -->
             <div class="card-tools">
 
               <!-- Minimize button -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                      title="<?php echo 'Minimizar'; ?>">
+                      title="Minimizar">
                 <i class="fas fa-minus"></i>
+              </button>
+
+              <!-- Refresh button -->
+              <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
+                      data-source-selector="#card-refresh-content" data-load-on-init="false" onclick="resetCraft()"
+                      title="Actualizar">
+                <i class="fas fa-sync-alt"></i>
               </button>
 
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
-                      title="<?php echo 'Maximizar'; ?>">
-                <i class="fas fa-expand"></i>
+                      title="Maximizar"><i class="fas fa-expand"></i>
               </button>
 
             </div>
 
           </div>
 
-          <!-- Body card -->
+          <!-- Card body (table) -->
           <div class="card-body">
-
-            <h5 class="card-text">Descripción</h5>
-
-            <p class="card-text">
-            Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso para presentar la información relevante. 
-            Puedes adaptarlo según las necesidades específicas de tu comunicación oficial.
+            <p>Este formato incluye secciones clave para referirse a los oficios y proporciona un marco claro y conciso
+              para presentar la información relevante. Puedes adaptarlo según las necesidades específicas de tu
+              comunicación oficial.
             </p>
 
             <hr>
-          </div>
 
-
-          <!-- Card footer -->
-          <div class="card-footer bg-gradient-info text-right">
-            <em>Ver. <?php echo SYSTEM_VERSION; ?></em>
-          </div>
-
-
-        </div>
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-outline card-info">
-                <div class="card-header">
-                  <h3 class="card-title">
-                  
-                  </h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
             <textarea id="summernote">
                 <div style="padding-left:80px;padding-right:80px;">
                     <div style="padding:30px;">
                         <div class="row">
                             <div class="col-12" style="text-align:left;">
-                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sysreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
+                                <p><img class="image_resized" style="opacity:.3;width:60%;" src="views/resources/dist/img/logo_sisreg_.png" alt="Imagen del poder judicials y Escuela Judicial"></p>
                             </div>
                         </div>
                         <p style="margin:0cm;text-align:right;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:10.0pt;" lang="ES"></span></strong></span></p>
@@ -131,7 +118,19 @@
                           
 
                             <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></span></p><br><br>
-                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp; </strong></span><span lang="ES" dir="ltr"> </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:15.0pt;">Por este medio remito a usted en archivo electrónico, escrito para el cuerpo de correo electrónico, a fin de que gire sus respetables instrucciones a quien corresponda para que sea colocado en los correos masivos de la Plataforma de Cursos de Escuela Judicial; así mismo, se remite banner para que sea situado en el apartado del listado de Acuerdos de la página del Poder Judicial del Estado de Veracruz; lo anterior, para efectos de darle difusión a la capacitación que se llevará a cabo en la modalidad ____________________: “_______________________”, el _____ <strong>de</strong> ______ del año en curso, <strong>a las __:__ horas</strong>, en el Auditorio “C” del Edificio “C” de esta Ciudad Judicial, y se trasmitirá a través de la aplicación Videoconferencia Telmex, así como por la página del Facebook del Poder Judicial del Estado de Veracruz.</span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><br><br> <br><br>
+                            <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp; </strong></span><span lang="ES" dir="ltr"> </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:15.0pt;">Sirva la presente para solicitar a usted acceso al estacionamiento para ______ vehículos de los ponentes que impartirán la Conferencia denominada: “__________”, el día ______ de febrero del año en curso en horario de ___:___ a ___:___ horas.
+<br><br><br>
+                          <strong> NOMBRE DE LOS PONENTES:</strong>    <br>
+
+                          <strong>1.	xxxxxxxx, Cargo</strong>  <br>
+
+                            <strong>2.	. xxxxxxxx, Cargo</strong>  <br>
+                          <strong>3.	xxxxxxxx, Cargo</strong>  <br>
+
+                              Sin Datos De Vehículos <br>
+                              
+                              DIRECCIÓN DE LA ESCUELA JUDICIAL DEL ESTADO DE VERACRUZ
+                              </span></a><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><br><br> <br><br>
                             <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p><br>
                             <p style="line-height:16.0pt;margin:0cm;text-align:justify;"><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"><span><strong>&nbsp;&nbsp;</strong></span><span style="font-family:Calibri, sans-serif;font-size:11pt;"><strong><span style="font-family:&quot;Arial Narrow&quot;,sans-serif;font-size:12.0pt;"></span></strong></span></p>
                             <br><br>
@@ -238,53 +237,35 @@
 
 
             </textarea>
-                
-                
-                </div>
-                
-              </div>
-            </div>
-            <!-- /.col-->
+
           </div>
 
 
-          <!-- ./row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card card-outline card-info">
-                
-                <!-- /.card-header -->
-                <div class="card-body p-0">
-              
-                </div>
-                
-              </div>
-            </div>
-            <!-- /.col-->
+          <!-- Card footer -->
+          <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
+            <em><?php echo SYSTEM_FULL_NAME; ?><?php echo SYSTEM_VERSION; ?></em>
           </div>
-          <!-- ./row -->
-        </section>
+
+        </div>
 
       </div>
     </div>
   </div>
-</div>
+
+</section>
 
 
 <!-- jQuery -->
 <script src="views/resources/plugins/jquery/jquery.min.js"></script>
-
-
-<!-- Sweet Alert -->
-<script src="views/resources/plugins/sweetalert2/sweetalert2.11.7.31.js"></script>
-
-
 
 <!-- Page specific script -->
 <script>
   $(document).ready(function () {
     // Summernote
     $('#summernote').summernote({
+      fontNames: ['Arial Narrow'],
+      addDefaultFonts: false,
+      lang: 'es-ES',
       toolbar: [
         ['style', ['style']],
         ['font', ['bold', 'underline', 'clear']],
@@ -293,24 +274,40 @@
         ['table', ['table']],
         ['insert', ['link', 'picture', 'video']],
         ['view', ['fullscreen', 'codeview', 'help']],
+        ['undo', ['undo']],
+        ['redo', ['redo']],
+        ['mybutton', ['refresh']],
         ['misc', ['print']]
+
       ],
+      buttons: {
+        refresh: refreshButton,
+      },
       print: {
         'stylesheetUrl': 'views/administration/pages/craft1.css',
       }
     });
 
-    // CodeMirror
-    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-      mode: "htmlmixed",
-      theme: "monokai"
-    });
   });
 
+  let refreshButton = function (context) {
+    let ui = $.summernote.ui;
+
+    // create button
+    let button = ui.button({
+      contents: '<i class="fa-solid fa-arrows-rotate"/> Reiniciar',
+      tooltip: 'Reiniciar oficio',
+      click: function () {
+        // invoke insertText method with 'refresh' on editor module.
+        resetCraft();
+      }
+    });
+
+    return button.render();   // return button as jquery object
+  }
+
+  function resetCraft(){
+    location.reload();
+  }
 
 </script>
-
-
-
-
-

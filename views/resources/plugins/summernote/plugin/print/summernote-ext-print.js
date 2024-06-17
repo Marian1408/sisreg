@@ -28,6 +28,11 @@
         print: 'Imprimir'
       }
     },
+    'es-ES': {
+      print: {
+        print: 'Imprimir'
+      }
+    },
     'fr-FR': {
       print: {
         print: 'Imprimer'
@@ -97,7 +102,7 @@
         // create button
         var button = ui.button({
           contents: '<i class="fa fa-print"/> ' + lang.print.print,
-          tooltip: lang.print.print,
+          tooltip: lang.print.print + ' oficio',
           container: options.container,
           click: function () {
             var $frame = getPrintframe();

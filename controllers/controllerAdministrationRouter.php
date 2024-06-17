@@ -31,6 +31,10 @@
         case ($nameOfMethod === 'login'):
           $this->login ();
           break;
+      
+        case ($nameOfMethod === 'craftsList'):
+          $this->craftsList ();
+          break;
         
         case ($nameOfMethod === 'comunicacionSocial'):
           $this->comunicacionSocial ();
@@ -68,8 +72,8 @@
           $this->presidiumInvitacionDarPalabras ();
           break;
         
-        case ($nameOfMethod === 'presidiumSoloAcompañar'):
-          $this->presidiumSoloAcompañar ();
+        case ($nameOfMethod === 'presidiumSoloAcompanar'):
+          $this->presidiumSoloAcompanar ();
           break;
         
         case ($nameOfMethod === 'tecnologia'):
@@ -287,59 +291,65 @@
       include "views/administration/pages/event/viewEventCheckEventAuditorium.php";
     }
     
+    
+    private function craftsList (): void
+    {
+      include "views/administration/pages/crafts/viewCraftsList.php";
+    }
+    
     private function comunicacionSocial (): void
     {
-      include "views/administration/pages/crafts/comunicacionSocial.php";
+      include "views/administration/pages/crafts/viewComunicacionSocial.php";
     }
     
     private function espacioDeEstacionamiento (): void
     {
-      include "views/administration/pages/crafts/espacioDeEstacionamiento.php";
+      include "views/administration/pages/crafts/viewEspacioDeEstacionamiento.php";
     }
     
     private function invitacionForaneos (): void
     {
-      include "views/administration/pages/crafts/invitacionForaneos.php";
+      include "views/administration/pages/crafts/viewInvitacionForaneos.php";
     }
     
     private function invitacionPresencial (): void
     {
-      include "views/administration/pages/crafts/invitacionPresencial.php";
+      include "views/administration/pages/crafts/viewInvitacionPresencial.php";
     }
     
     private function invitacionPresencialYvirtual (): void
     {
-      include "views/administration/pages/crafts/invitacionPresencialYvirtual.php";
+      include "views/administration/pages/crafts/viewInvitacionPresencialYvirtual.php";
     }
     
     private function presidenta (): void
     {
-      include "views/administration/pages/crafts/presidenta.php";
+      include "views/administration/pages/crafts/viewPresidenta.php";
     }
     
     private function presidium (): void
     {
-      include "views/administration/pages/crafts/presidium.php";
+      include "views/administration/pages/crafts/viewPresidium.php";
     }
     
     private function presidiumInvitacionAdarPalabrasSintesisCurricular (): void
     {
-      include "views/administration/pages/crafts/presidiumInvitacionAdarPalabrasSintesisCurricular.php";
+      include "views/administration/pages/crafts/viewPresidiumInvitacionAdarPalabrasSintesisCurricular.php";
     }
     
     private function presidiumInvitacionDarPalabras (): void
     {
-      include "views/administration/pages/crafts/presidiumInvitacionDarPalabras.php";
+      include "views/administration/pages/crafts/viewPresidiumInvitacionDarPalabras.php";
     }
     
-    private function presidiumSoloAcompañar (): void
+    private function presidiumSoloAcompanar (): void
     {
-      include "views/administration/pages/crafts/presidiumSoloAcompañar.php";
+      include "views/administration/pages/crafts/viewPresidiumSoloAcompanar.php";
     }
     
     private function tecnologia (): void
     {
-      include "views/administration/pages/crafts/tecnologia.php";
+      include "views/administration/pages/crafts/viewTecnologia.php";
     }
     
     

@@ -11,19 +11,6 @@
    */
 ?>
 
-<!-- Head -->
-<head>
-
-  <!-- DataTables -->
-  <link rel="stylesheet" href="views/resources/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="views/resources/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="views/resources/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-
-  <!-- Theme style personalized -->
-  <link rel="stylesheet" href="views/resources/dist/css/custom.css">
-
-</head>
-
 <!-- Header content -->
 <section class="content-header">
   <div class="container-fluid">
@@ -91,7 +78,7 @@
           <!-- Card body /-->
           <div class="card-body">
 
-            <!-- System Inventory CLTM /-->
+            <!-- SISREG | Sistema de Registro /-->
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-window-restore"></i>
@@ -171,7 +158,6 @@
               </ul>
             </div>
 
-
             <!-- Versioned -->
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
@@ -183,7 +169,6 @@
                 <li class="cltm-li"><a class="cltm-callout" href="github.com/gcamarenaprog/cltm">Version 1.0.0 | May 2024</a></li>
               </ul>
             </div>
-
 
             <!-- Author -->
             <div class="callout callout-success">
@@ -215,65 +200,3 @@
   </div>
 
 </section>
-
-
-
-<!-- jQuery -->
-<script src="views/resources/plugins/jquery/jquery.min.js"></script>
-
-<!-- Custom JS Code -->
-<script src="views/resources/dist/js/functions.js"></script>
-
-<script>
-
-  // Load spanish language for DataTables
-  loadSpanishLanguage();
-
-  /***
-   * DataTable initialize function
-   * @returns void
-   * @type {*|jQuery|HTMLElement}
-   */
-  let table = $(function () {
-    $("#tableUsers").DataTable({
-      "destroy": true,
-      "processing": true,
-      "serveSide": true,
-      "ajax": {
-        'url': 'controllers/controllerEvent.php',
-        'type': 'GET',
-        'data': {
-          getAllDataEvent: 'getAllDataEvent',
-        },
-
-      },
-      "dom": 'Bfrtip',
-      buttons: [
-        'pageLength',
-        'csv',
-        'print',
-        'colvis'
-      ],
-      language: {
-        buttons: buttons,
-        lengthMenu: lengthMenu,
-        infoEmpty: infoEmpty,
-        info: info,
-        search: search,
-        zeroRecords: zeroRecords,
-        loadingRecords: loadingRecords,
-        paginate: paginate
-      },
-      "responsive": true,
-      "lengthChange": true,
-      lengthMenu: [
-        [10, 25, 50, -1],
-        ['10' + rows, '25' + rows, '50' + rows, showAll]
-      ],
-      "autoWidth": false
-    }).buttons().container().appendTo('#tableUsers_wrapper .col-md-6:eq(0)');
-  });
-
-
-
-</script>
