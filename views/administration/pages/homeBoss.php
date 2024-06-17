@@ -17,14 +17,14 @@
 
     <!-- Image logo -->
     <div style="margin: 20px; text-align: center;">
-      <img src="views/resources/dist/img/logo_SISREG_.png" alt="Photo">
+      <img src="views/resources/dist/img/logo_sisreg_.png" alt="Photo">
     </div>
 
     <div class="row mb-2">
 
       <!-- Title /-->
       <div class="col-sm-6">
-        <h1>Bienvenido a la administración
+        <h1>Bienvenido a la administración:
           <b><?php echo $_SESSION['user_name'] . ' ' . $_SESSION['user_lastname']; ?></b></h1>
       </div>
 

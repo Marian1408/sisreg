@@ -11,17 +11,30 @@
    */
 ?>
 
-<!-- Header /-->
-<div class="content-header">
+<!-- Head -->
+<head>
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="views/resources/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="views/resources/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="views/resources/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <!-- Theme style personalized -->
+  <link rel="stylesheet" href="views/resources/dist/css/custom.css">
+
+</head>
+
+<!-- Header content -->
+<section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
 
-      <!-- Title /-->
+      <!-- Title -->
       <div class="col-sm-6">
-        <h1>ACERCA DE..</h1>
+        <h1><b>Acerca de</b></h1>
       </div>
 
-      <!-- Icon /-->
+      <!-- Icon page -->
       <div class="col-sm-6 icon-page">
         <ol class="breadcrumb float-sm-right">
           <i class="fa fa-circle-info"></i>
@@ -30,98 +43,169 @@
 
     </div>
   </div>
-</div>
+</section>
 
-<!-- Content /-->
-<div class="content">
+<!-- Main content -->
+<section class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-12">
 
-        <div class="card card-info card-outline sisreg-card-outline">
+        <!-- Content -->
+        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
 
-          <!-- Header card /-->
+          <!-- Card header -->
           <div class="card-header">
-            <h5 class="card-title">Subtítulo</h5 class="card-title">
 
-            <!-- Card buttons -->
+            <!-- Subtitle -->
+            <h5 class="card-title" style="font-size: 1.25rem;">
+              <i class="fa-solid fa-circle-info"></i>
+              <b>Acerca del sistema</b>
+              </h5>
+
+            <!-- Card tools -->
             <div class="card-tools">
 
               <!-- Minimize button -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                      title="<?php echo 'Minimizar'; ?>">
+                      title="Minimizar">
                 <i class="fas fa-minus"></i>
+              </button>
+
+              <!-- Refresh button -->
+              <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
+                      data-source-selector="#card-refresh-content" data-load-on-init="false"
+                      title="Actualizar">
+                <i class="fas fa-sync-alt"></i>
               </button>
 
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
-                      title="<?php echo 'Maximizar'; ?>">
-                <i class="fas fa-expand"></i>
+                      title="Maximizar"><i class="fas fa-expand"></i>
               </button>
 
             </div>
 
           </div>
 
-          <!-- Body card -->
+          <!-- Card body /-->
           <div class="card-body">
 
-            <h5 class="card-text">Acerca del sistema</h5>
+            <!-- System Inventory CLTM /-->
+            <div class="callout callout-success">
+              <h5 class="cltm-card-subtitle-1">
+                <i class="fa-solid fa-window-restore"></i>
+                <b> Acerca de SISREG / Sistema de Registro</b>
+              </h5>
+              <hr>
+              <div class="card-body text-center">
+                <img src="views/resources/dist/img/logo_sisreg.png"
+                     alt="SISREG / Sistema de Registro"
+                     style="height:250px;"
+                     title="SISREG / Sistema de Registro">
+                <br><br>
+                <p style="font-size: 1.5rem;"><b> SISREG</b></p>
+                <hr>
+                <p style="font-size: 1.2rem;">Sistema de Registro</p>
+                <p>Sistema para el registro de eventos y actividades del Poder Judicial del Estado de Veracruz y la Escuela Judicial del Estado de Veracruz</p>
 
-            <p class="card-text">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-              of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-              evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
+              </div>
+            </div>
 
-            <hr>
-            <p class="card-text">
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-              of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-              search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-              evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
+            <!-- Build with /-->
+            <div class="callout callout-success">
+              <h5 class="cltm-card-subtitle-1">
+                <i class="fa-solid fa-gear"></i>
+                <b> Construido con </b>
+              </h5>
+              <p>Este proyecto está construido con las siguientes tecnologías:</p>
+              <hr>
+              <!-- Programming Languages -->
+              <i class="fa-solid fa-code"></i>
+              <b>Lenguajes de programación</b>
+              <ul>
+                <li class="cltm-li"><a href="https://www.php.net/">PHP 8.2</a></li>
+                <li class="cltm-li"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
+              </ul>
 
-            <h1 class="display-1">Display 1</h1>
-            <h1 class="display-2">Display 2</h1>
-            <h1 class="display-3">Display 3</h1>
-            <h1 class="display-4">Display 4</h1>
+              <!-- Theme -->
+              <i class="fa-solid fa-code"></i>
+              <b>Tema</b>
+              <ul>
+                <li class="cltm-li"><a href="https://adminlte.io/">AdminLTE 3.1.0</a></li>
+              </ul>
 
-            <h1>h1. Bootstrap heading</h1>
-            <h2>h2. Bootstrap heading</h2>
-            <h3>h3. Bootstrap heading</h3>
-            <h4>h4. Bootstrap heading</h4>
-            <h5>h5. Bootstrap heading</h5>
-            <h6>h6. Bootstrap heading</h6>
+              <!-- Frameworks -->
+              <i class="fa-solid fa-code"></i> <b>Frameworks</b>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href="https://getbootstrap.com/"> Bootstrap 4.6</a></li>
+              </ul>
 
-            <p>You can use the mark tag to
-              <mark>highlight</mark>
-              text.
-            </p>
-            <p>
-              <del>This line of text is meant to be treated as deleted text.</del>
-            </p>
-            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-            <p>
-              <ins>This line of text is meant to be treated as an addition to the document.</ins>
-            </p>
-            <p><u>This line of text will render as underlined.</u></p>
-            <p><small>This line of text is meant to be treated as fine print.</small></p>
-            <p><strong>This line rendered as bold text.</strong></p>
-            <p><em>This line rendered as italicized text.</em></p>
+              <!-- Libraries -->
+              <i class="fa-solid fa-code"></i> <b>Bibliotecas </b>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href="https://jquery.com/">jQuery 3.5.1+y</a></li>
+                <li class="cltm-li"><a class="cltm-callout" href="https://floating-ui.com/?utm_source=popper.js.org">Popper.js 1.16.1+</a>
+                </li>
+                <li class="cltm-li"><a class="cltm-callout" href="https://datatables.net/">DataTables</a></li>
+              </ul>
 
+              <!-- Icons packs -->
+              <i class="fa-solid fa-code"></i> <b>Paquetes de iconos </b>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href="https://fontawesome.com/">FontAwesome 5</a></li>
+                <li class="cltm-li"><a class="cltm-callout" href="https://ionic.io/ionicons">Ionicons</a></li>
+                <li class="cltm-li"><a class="cltm-callout" href="https://github.com/lipis/flag-icons#readme">Flag-Icons-CSS</a></li>
+              </ul>
+
+              <!-- Notifications -->
+              <i class="fa-solid fa-code"></i> <b>Notificaciones </b>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href=https://sweetalert2.github.io/">SweetAlert2</a></li>
+              </ul>
+
+              <!-- Form elements -->
+              <i class="fa-solid fa-code"></i> <b>Elementos de formulario </b>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href="https://select2.org/">Select2</a></li>
+              </ul>
+            </div>
+
+
+            <!-- Versioned -->
+            <div class="callout callout-success">
+              <h5 class="cltm-card-subtitle-1">
+                <i class="fa-solid fa-code-branch"></i>
+                <b> Version </b>
+              </h5>
+              <hr>
+              <ul>
+                <li class="cltm-li"><a class="cltm-callout" href="github.com/gcamarenaprog/cltm">Version 1.0.0 | May 2024</a></li>
+              </ul>
+            </div>
+
+
+            <!-- Author -->
+            <div class="callout callout-success">
+              <h5 class="cltm-card-subtitle-1">
+                <i class="fa-regular fa-circle-user"></i>
+                <b> Autor</b>
+              </h5>
+              <p>María Marina Vázquez Hernández</p>
+              <hr>
+              <dl class="row">
+                <dt class="col-sm-1">E-mail</dt>
+                <dd class="col-sm-11"><a href="mailto:mia140898@gmail.com">
+                    mia140898@gmail.com</a></dd>
+              </dl>
+             
+            </div>
+            
           </div>
-
-
 
           <!-- Card footer -->
           <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
-            <em><?php echo SYSTEM_VERSION; ?></em>
+            <em><?php echo SYSTEM_FULL_NAME; ?> <?php echo SYSTEM_VERSION; ?></em>
           </div>
 
         </div>
@@ -129,5 +213,67 @@
       </div>
     </div>
   </div>
-</div>
 
+</section>
+
+
+
+<!-- jQuery -->
+<script src="views/resources/plugins/jquery/jquery.min.js"></script>
+
+<!-- Custom JS Code -->
+<script src="views/resources/dist/js/functions.js"></script>
+
+<script>
+
+  // Load spanish language for DataTables
+  loadSpanishLanguage();
+
+  /***
+   * DataTable initialize function
+   * @returns void
+   * @type {*|jQuery|HTMLElement}
+   */
+  let table = $(function () {
+    $("#tableUsers").DataTable({
+      "destroy": true,
+      "processing": true,
+      "serveSide": true,
+      "ajax": {
+        'url': 'controllers/controllerEvent.php',
+        'type': 'GET',
+        'data': {
+          getAllDataEvent: 'getAllDataEvent',
+        },
+
+      },
+      "dom": 'Bfrtip',
+      buttons: [
+        'pageLength',
+        'csv',
+        'print',
+        'colvis'
+      ],
+      language: {
+        buttons: buttons,
+        lengthMenu: lengthMenu,
+        infoEmpty: infoEmpty,
+        info: info,
+        search: search,
+        zeroRecords: zeroRecords,
+        loadingRecords: loadingRecords,
+        paginate: paginate
+      },
+      "responsive": true,
+      "lengthChange": true,
+      lengthMenu: [
+        [10, 25, 50, -1],
+        ['10' + rows, '25' + rows, '50' + rows, showAll]
+      ],
+      "autoWidth": false
+    }).buttons().container().appendTo('#tableUsers_wrapper .col-md-6:eq(0)');
+  });
+
+
+
+</script>

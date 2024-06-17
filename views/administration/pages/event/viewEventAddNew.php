@@ -27,7 +27,6 @@
   $activities2 = $objectActivities->getAllActivities ('2');
   $activities3 = $objectActivities->getAllActivities ('3');
 
-
 ?>
 
 <!-- Header -->
