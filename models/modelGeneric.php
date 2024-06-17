@@ -115,10 +115,12 @@
      */
     public function insert ($dataColumns, $data): int|bool
     {
-      $sql = "INSERT INTO {$this->table} $dataColumns VALUES $data ";
+      $sql = "INSERT INTO {$this->table} {$dataColumns} VALUES {$data}";
       $statement = $this->connectionPDO->prepare ($sql);
       $statement->execute ();
       return $count = $statement->rowCount();
     }
+    
+    
     
   }

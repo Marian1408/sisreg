@@ -53,4 +53,19 @@
       return $connection->query ($sql);
     }
     
+    /**
+     * Get all users with user role
+     *
+     * @param $role
+     * @return bool|array
+     */
+    public function getAllUsersWithRole ($role): bool|array
+    {
+      $sql = " SELECT * FROM {$this->table} WHERE user_role = {$role} ";
+      $statement = $this->connectionPDO->prepare ($sql);
+      $statement->execute ();
+      return $statement->fetchAll ();
+    }
+    
+    
   }

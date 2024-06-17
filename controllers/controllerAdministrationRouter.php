@@ -32,9 +32,50 @@
           $this->login ();
           break;
         
-        case ($nameOfMethod === 'craft1'):
-          $this->craft ();
+        case ($nameOfMethod === 'comunicacionSocial'):
+          $this->comunicacionSocial ();
           break;
+        
+        case ($nameOfMethod === 'espacioDeEstacionamiento'):
+          $this->espacioDeEstacionamiento ();
+          break;
+        
+        case ($nameOfMethod === 'invitacionForaneos'):
+          $this->invitacionForaneos ();
+          break;
+        
+        case ($nameOfMethod === 'invitacionPresencial'):
+          $this->invitacionPresencial ();
+          break;
+        
+        case ($nameOfMethod === 'invitacionPresencialYvirtual'):
+          $this->invitacionPresencialYvirtual ();
+          break;
+        
+        case ($nameOfMethod === 'presidenta'):
+          $this->presidenta ();
+          break;
+        
+        case ($nameOfMethod === 'presidium'):
+          $this->presidium ();
+          break;
+        
+        case ($nameOfMethod === 'presidiumInvitacionAdarPalabrasSintesisCurricular'):
+          $this->presidiumInvitacionAdarPalabrasSintesisCurricular ();
+          break;
+        
+        case ($nameOfMethod === 'presidiumInvitacionDarPalabras'):
+          $this->presidiumInvitacionDarPalabras ();
+          break;
+        
+        case ($nameOfMethod === 'presidiumSoloAcompañar'):
+          $this->presidiumSoloAcompañar ();
+          break;
+        
+        case ($nameOfMethod === 'tecnologia'):
+          $this->tecnologia ();
+          break;
+        
         
         case ($nameOfMethod === 'viewAllEvents'):
           $this->eventViewAll ();
@@ -244,6 +285,61 @@
     private function eventCheckEventAuditorium (): void
     {
       include "views/administration/pages/event/viewEventCheckEventAuditorium.php";
+    }
+    
+    private function comunicacionSocial (): void
+    {
+      include "views/administration/pages/crafts/comunicacionSocial.php";
+    }
+    
+    private function espacioDeEstacionamiento (): void
+    {
+      include "views/administration/pages/crafts/espacioDeEstacionamiento.php";
+    }
+    
+    private function invitacionForaneos (): void
+    {
+      include "views/administration/pages/crafts/invitacionForaneos.php";
+    }
+    
+    private function invitacionPresencial (): void
+    {
+      include "views/administration/pages/crafts/invitacionPresencial.php";
+    }
+    
+    private function invitacionPresencialYvirtual (): void
+    {
+      include "views/administration/pages/crafts/invitacionPresencialYvirtual.php";
+    }
+    
+    private function presidenta (): void
+    {
+      include "views/administration/pages/crafts/presidenta.php";
+    }
+    
+    private function presidium (): void
+    {
+      include "views/administration/pages/crafts/presidium.php";
+    }
+    
+    private function presidiumInvitacionAdarPalabrasSintesisCurricular (): void
+    {
+      include "views/administration/pages/crafts/presidiumInvitacionAdarPalabrasSintesisCurricular.php";
+    }
+    
+    private function presidiumInvitacionDarPalabras (): void
+    {
+      include "views/administration/pages/crafts/presidiumInvitacionDarPalabras.php";
+    }
+    
+    private function presidiumSoloAcompañar (): void
+    {
+      include "views/administration/pages/crafts/presidiumSoloAcompañar.php";
+    }
+    
+    private function tecnologia (): void
+    {
+      include "views/administration/pages/crafts/tecnologia.php";
     }
     
     

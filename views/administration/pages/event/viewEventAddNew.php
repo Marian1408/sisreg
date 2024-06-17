@@ -13,15 +13,21 @@
   # Files required
   require_once ('controllers/controllerActivities.php');
   require_once ('controllers/controllerModality.php');
+  require_once ('controllers/controllerUser.php');
   
   $objectModality = new ControllerModality();
   $objectActivities = new ControllerActivities('activities1', '1');
+  $objectUser = new ControllerUser();
+  
+  $allUsers = $objectUser->getAllUsersWithRole (3);
   
   $modalities = $objectModality->getAllModality ();
   
   $activities1 = $objectActivities->getAllActivities ('1');
   $activities2 = $objectActivities->getAllActivities ('2');
   $activities3 = $objectActivities->getAllActivities ('3');
+  
+
 
 ?>
 
@@ -49,8 +55,8 @@
 <form action="controllers/controllerEvent.php"
       enctype="multipart/form-data"
       method="post"
-      id="addNewEvent"
-      name="addNewEvent">
+      id="addNewEventForm"
+      name="addNewEventForm">
 
   <section>
     <!-- Logistics prior to the event /-->
@@ -821,44 +827,56 @@
 
                             <!-- Technology Manager (Manager) /-->
                             <div class="form-group">
-                              <label for="inputTechnologyManagerManager">
+                              <label for="selectTechnologyManagerManager">
                                 <h5 class="sisreg-card-subtitle">
                                   <b> <i class="fa-solid fa-check"></i>
                                     Responsable de tecnología (Directivo)
                                   </b>
                                 </h5>
                               </label>
-                              <input type="text"
-                                     class="form-control"
-                                     id="inputTechnologyManagerManager"
-                                     name="inputTechnologyManagerManager"
-                                     placeholder="Nombre del responsable.."
-                                     title="Escribe el nombre del responsable de tecnología (Directivo)"
-                                     required>
-                              <div id="inputTechnologyManagerManagerHelp" class="sisreg-form-help">Nombre del
-                                responsable
-                                de
-                                tecnología (Directivo)
+                              <select class="form-control"
+                                      id="selectTechnologyManagerManager"
+                                      name="selectTechnologyManagerManager"
+                                      title="Selecciona un responsable"
+                                      required>
+                                <option value="" disabled selected>Selecciona un responsable</option>
+                                <?php
+                                  foreach ($allUsers as $index => $item) { ?>
+                                    <option value="<?php echo $item['user_id']; ?>">
+                                      <?php echo $item['user_name'] . ' ' . $item['user_last_name']; ?>
+                                    </option>';
+                                  <?php }
+                                ?>
+                              </select>
+                              <div id="selectTechnologyManagerManagerHelp" class="sisreg-form-help">Nombre del
+                                responsable de tecnología (Directivo)
                               </div>
                             </div>
 
                             <!-- Technology Manager (Social Service) /-->
                             <div class="form-group">
-                              <label for="inputManagerSocialService">
+                              <label for="selectManagerSocialService">
                                 <h5 class="sisreg-card-subtitle">
                                   <b> <i class="fa-solid fa-check"></i>
                                     Responsable de tecnología (Servicio social)
                                   </b>
                                 </h5>
                               </label>
-                              <input type="text"
-                                     class="form-control"
-                                     id="inputManagerSocialService"
-                                     name="inputManagerSocialService"
-                                     placeholder="Nombre del responsable.."
-                                     title="Escribe el nombre del responsable de tecnología (Servicio social)"
-                                     required>
-                              <div id="inputManagerSocialServiceHelp" class="sisreg-form-help">Nombre del responsable de
+                              <select class="form-control"
+                                      id="selectManagerSocialService"
+                                      name="selectManagerSocialService"
+                                      title="Selecciona un responsable"
+                                      required>
+                                <option value="" disabled selected>Selecciona un responsable</option>
+                                <?php
+                                  foreach ($allUsers as $index => $item) { ?>
+                                    <option value="<?php echo $item['user_id']; ?>">
+                                      <?php echo $item['user_name'] . ' ' . $item['user_last_name']; ?>
+                                    </option>';
+                                  <?php }
+                                ?>
+                              </select>
+                              <div id="selectManagerSocialServiceHelp" class="sisreg-form-help">Nombre del responsable de
                                 tecnología (Servicio social)
                               </div>
                             </div>
@@ -886,21 +904,28 @@
 
                             <!-- Portfolio manager /-->
                             <div class="form-group">
-                              <label for="inputPortfolioManager">
+                              <label for="selectPortfolioManager">
                                 <h5 class="sisreg-card-subtitle">
                                   <b> <i class="fa-solid fa-check"></i>
                                     Responsable de la carpeta
                                   </b>
                                 </h5>
                               </label>
-                              <input type="text"
-                                     class="form-control"
-                                     id="inputPortfolioManager"
-                                     name="inputPortfolioManager"
-                                     placeholder="Nombre del responsable.."
-                                     title="Escribe el nombre del responsable de la carpeta"
-                                     required>
-                              <div id="inputPortfolioManagerHelp" class="sisreg-form-help">Nombre del responsable de la
+                              <select class="form-control"
+                                      id="selectPortfolioManager"
+                                      name="selectPortfolioManager"
+                                      title="Selecciona un responsable"
+                                      required>
+                                <option value="" disabled selected>Selecciona un responsable</option>
+                                <?php
+                                  foreach ($allUsers as $index => $item) { ?>
+                                    <option value="<?php echo $item['user_id']; ?>">
+                                      <?php echo $item['user_name'] . ' ' . $item['user_last_name']; ?>
+                                    </option>';
+                                  <?php }
+                                ?>
+                              </select>
+                              <div id="selectPortfolioManagerHelp" class="sisreg-form-help">Nombre del responsable de la
                                 carpeta
                               </div>
                             </div>
@@ -1481,6 +1506,17 @@
             title="Añadir evento">
       Añadir evento
     </button>
+
+    <button type="button"
+            class="btn btn-primary btn-flat cltm-tools-buttons"
+            title="Añadir evento"
+            id="addNewEventButton"
+            name="addNewEventButton"
+            disabled
+            onclick="addEvent()">
+      <i class="fa-solid fa-floppy-disk"></i>  Añadir evento
+    </button>
+    
   </section>
 
 
@@ -1685,11 +1721,86 @@
 
   });
 
+  // Send POST data with Ajax (Pending)
+  $("#addNewEventForm").on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: 'controllers/controllerEvent.php',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function (msg) {
+          modalSuccessfulSaveRecord();
+      }
+    });
+  });
+
+  function modalSuccessfulSaveRecord(filename) {
+    Swal.fire({
+      title: 'Registro guardado exitosamente',
+      text: 'Registro guardado exitosamente',
+      confirmButtonText: 'Aceptar',
+      icon: 'success',
+      confirmButtonColor: '#3085d6'
+    }).then(function() {
+      window.location = "viewAllEvents";
+    })
+  }
 
   function test() {
     let date = $("#dateEventDate").find("input").val();
     date = date + ':00';
     console.log(date);
   }
+
+  /***
+   * Function that executes the post method to delete a user via Ajax
+   *
+   * @returns void
+   * @param {int} idUser
+   * @param {string} username
+   */
+  function addEvent() {
+
+    let formData = new FormData();
+    formData.append("username", "Groucho");
+    formData.append("accountnum", 123456); //
+
+// HTML file input user's choice...
+   // formData.append("customFile", myFile[0]);
+
+
+    // Function that sends and receives response with AJAX
+    $.ajax({
+      type: 'POST',
+      url: 'controllers/controllerEvent.php',
+      data: formData,
+      contentType: false,
+      cache: false,
+      processData: false,
+      //data: new FormData(this),
+
+
+
+    }).done(function (msg) {  // Function that is executed if everything went well
+      console.log("OK: " + msg);
+
+
+    }).fail(function (jqXHR, textStatus, errorThrown) { // Function that is executed if something has gone wrong
+
+      // Error message in console
+      console.log("The following error occured: " + textStatus + " " + errorThrown);
+
+      // Error removal console message
+      console.log(msg.status);
+
+      // Error removal toast message
+      modalErrorDeleteUser();
+
+    });
+  }
+
 
 </script>

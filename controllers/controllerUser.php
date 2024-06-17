@@ -32,8 +32,6 @@
   }
   
   
-  
-  
   # GET ALL users via AJAX for DataTable
   if (isset($_GET['getAllData'])) {
     ControllerUser::getAllUsersForDataTables ();
@@ -58,6 +56,16 @@
     function __construct ()
     {
       $this->model = new ModelUser();
+    }
+    
+    public function getAllUsersWithRole (int $role= 1): bool|array
+    {
+      return $this->model->getAllUsersWithRole ($role);
+    }
+    
+    function getAllUsers (): bool|array
+    {
+      return $this->model->getAll ();
     }
     
     /***
