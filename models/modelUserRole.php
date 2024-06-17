@@ -42,6 +42,8 @@
       return ucfirst ($result['user_role_name']);
     }
     
+
+    
     /***
      * Get all roles for DataTables format
      *

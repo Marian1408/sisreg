@@ -26,7 +26,6 @@
   $activities1 = $objectActivities->getAllActivities ('1');
   $activities2 = $objectActivities->getAllActivities ('2');
   $activities3 = $objectActivities->getAllActivities ('3');
-  
 
 
 ?>
@@ -876,7 +875,8 @@
                                   <?php }
                                 ?>
                               </select>
-                              <div id="selectManagerSocialServiceHelp" class="sisreg-form-help">Nombre del responsable de
+                              <div id="selectManagerSocialServiceHelp" class="sisreg-form-help">Nombre del responsable
+                                de
                                 tecnología (Servicio social)
                               </div>
                             </div>
@@ -958,7 +958,7 @@
 
                       <!-- Dates-->
                       <div class="col-md-6 mb-auto">
-                        <div class="card card-primary card-outline sisreg-card-outline cltm-height">
+                        <div class="card card-primary card-outline sisreg-card-outline">
 
                           <!-- Card header -->
                           <div class="card-header">
@@ -1514,9 +1514,9 @@
             name="addNewEventButton"
             disabled
             onclick="addEvent()">
-      <i class="fa-solid fa-floppy-disk"></i>  Añadir evento
+      <i class="fa-solid fa-floppy-disk"></i> Añadir evento
     </button>
-    
+
   </section>
 
 
@@ -1717,8 +1717,6 @@
       }
 
     });
-
-
   });
 
   // Send POST data with Ajax (Pending)
@@ -1732,75 +1730,35 @@
       cache: false,
       processData: false,
       success: function (msg) {
-          modalSuccessfulSaveRecord();
+        if (msg == 1) {
+          modalSuccessfulSaveRecordEvent();
+        } else {
+          modalErrorSaveRecordEvent();
+        }
+
       }
     });
   });
 
-  function modalSuccessfulSaveRecord(filename) {
+  function modalSuccessfulSaveRecordEvent() {
     Swal.fire({
-      title: 'Registro guardado exitosamente',
+      title: 'Registro guardado',
       text: 'Registro guardado exitosamente',
       confirmButtonText: 'Aceptar',
       icon: 'success',
       confirmButtonColor: '#3085d6'
-    }).then(function() {
+    }).then(function () {
       window.location = "viewAllEvents";
     })
   }
 
-  function test() {
-    let date = $("#dateEventDate").find("input").val();
-    date = date + ':00';
-    console.log(date);
+  function modalErrorSaveRecordEvent() {
+    Swal.fire({
+      title: 'Error al guardar',
+      text: 'Error al guardar el registro',
+      icon: 'error',
+      confirmButtonColor: '#3085d6'
+    })
   }
-
-  /***
-   * Function that executes the post method to delete a user via Ajax
-   *
-   * @returns void
-   * @param {int} idUser
-   * @param {string} username
-   */
-  function addEvent() {
-
-    let formData = new FormData();
-    formData.append("username", "Groucho");
-    formData.append("accountnum", 123456); //
-
-// HTML file input user's choice...
-   // formData.append("customFile", myFile[0]);
-
-
-    // Function that sends and receives response with AJAX
-    $.ajax({
-      type: 'POST',
-      url: 'controllers/controllerEvent.php',
-      data: formData,
-      contentType: false,
-      cache: false,
-      processData: false,
-      //data: new FormData(this),
-
-
-
-    }).done(function (msg) {  // Function that is executed if everything went well
-      console.log("OK: " + msg);
-
-
-    }).fail(function (jqXHR, textStatus, errorThrown) { // Function that is executed if something has gone wrong
-
-      // Error message in console
-      console.log("The following error occured: " + textStatus + " " + errorThrown);
-
-      // Error removal console message
-      console.log(msg.status);
-
-      // Error removal toast message
-      modalErrorDeleteUser();
-
-    });
-  }
-
 
 </script>

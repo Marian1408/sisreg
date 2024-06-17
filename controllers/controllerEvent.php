@@ -12,6 +12,8 @@
   
   require_once (dirname (__DIR__, 1) . '/includes/functions.php');
   require_once (dirname (__DIR__, 1) . '/models/modelEvent.php');
+  require_once (dirname (__DIR__, 1) . '/controllers/controllerEvent.php');
+  require_once (dirname (__DIR__, 1) . '/controllers/controllerUser.php');
   
   
   # ADD new user via AJAX for DataTable
@@ -86,12 +88,34 @@
     $dateEmptyDataIntoExcelFile = $_POST['dateEmptyDataIntoExcelFile'];
     $dateClearInformationFromTrained = $_POST['dateClearInformationFromTrained'];
     
-    $dateTimeVariable = date("Y-m-d H:i:s");
+    $dateTimeVariable = date ("Y-m-d H:i:s");
     
     $objectEvent = new ControllerEvent();
     
-    $data = " ('$inputNameOfActivity', '$selectActivityType1', '$selectActivityType2', '$selectActivityType3', '$selectModality', '$action1ActionNumbers', '$action1TrainedPeople', '$action1NumberHours', '$action2ActionNumbers', '$action2TrainedPeople', '$action2NumberHours', '$action3ActionNumbers', '$action3TrainedPeople', '$action3NumberHours', '$action4ActionNumbers', '$action4TrainedPeople', '$action4NumberHours', '$action5ActionNumbers', '$action5TrainedPeople', '$action5NumberHours', '$action6ActionNumbers', '$action6TrainedPeople', '$action6NumberHours', '$action7ActionNumbers', '$action7TrainedPeople', '$action7NumberHours', '$action8ActionNumbers', '$action8TrainedPeople', '$action8NumberHours', '$action9ActionNumbers', '$action9TrainedPeople', '$action9NumberHours', '$action10ActionNumbers', '$action10TrainedPeople', '$action10NumberHours', '$dateEventDate', '$dateFolderAssignmentDate', '$dateDeliveryDateAdministrativeLettersSignature', '$dateAcknowledgmentDeliveryDateSignature', '$dateMakingPosterDissemination', '$dateDeliveryDateAdministrativeOffices', '$dateCreationOpeningRegistrationsPlatformCourse', '$dateSendCallsBeforeValidating', '$dateDeliveryConcentratesCertificatesValidation', '$dateFolderDeliveryDate', '$dateConcentratesRecordsValidation', '$dateIntegratedFolderDelivery', '$dateEmptyDataIntoExcelFile', '$dateClearInformationFromTrained', '$selectTechnologyManagerManager', '$selectManagerSocialService', '$inputEventRequester', '$selectPortfolioManager', '$inputNameMagistrate', '$dateTimeVariable') ";
-    $columns = '(event_name_of_activity, event_activity_type1, event_activity_type2, event_activity_type3, event_modality, event_action_1_action_numbers, event_action_1_trained_people, event_action_1_number_hours, event_action_2_action_numbers, event_action_2_trained_people, event_action_2_number_hours, event_action_3_action_numbers, event_action_3_trained_people, event_action_3_number_hours, event_action_4_action_numbers, event_action_4_trained_people, event_action_4_number_hours, event_action_5_action_numbers, event_action_5_trained_people, event_action_5_number_hours, event_action_6_action_numbers, event_action_6_trained_people, event_action_6_number_hours, event_action_7_action_numbers, event_action_7_trained_people, event_action_7_number_hours, event_action_8_action_numbers, event_action_8_trained_people, event_action_8_number_hours, event_action_9_action_numbers, event_action_9_trained_people, event_action_9_number_hours, event_action_10_action_numbers, event_action_10_trained_people, event_action_10_number_hours, event_technology_manager_manager, event_manager_social_service, event_event_requester, event_input_portfolio_manager, event_name_magistrate, event_date_event_date, event_date_folder_assignment_date, event_date_delivery_date_administrative_letters_signature, event_date_acknowledgment_delivery_date_signature, event_date_making_poster_dissemination, event_date_delivery_date_administrative_offices, event_date_creation_opening_registrations_platform_course, event_date_send_calls_before_validating, event_date_delivery_concentrates_certificates_validation,  event_date_folder_delivery_date, event_date_concentrates_records_validation, event_date_integrated_folder_delivery, event_date_empty_data_into_excel_file, event_date_clear_information_from_trained, event_last_change_date)';
+    $data = " ('$inputNameOfActivity', '$selectActivityType1', '$selectActivityType2', '$selectActivityType3', '$selectModality',
+    '$action1ActionNumbers', '$action1TrainedPeople', '$action1NumberHours', '$action2ActionNumbers', '$action2TrainedPeople', '$action2NumberHours',
+    '$action3ActionNumbers', '$action3TrainedPeople', '$action3NumberHours', '$action4ActionNumbers', '$action4TrainedPeople', '$action4NumberHours',
+    '$action5ActionNumbers', '$action5TrainedPeople', '$action5NumberHours', '$action6ActionNumbers', '$action6TrainedPeople', '$action6NumberHours',
+    '$action7ActionNumbers', '$action7TrainedPeople', '$action7NumberHours', '$action8ActionNumbers', '$action8TrainedPeople', '$action8NumberHours',
+    '$action9ActionNumbers', '$action9TrainedPeople', '$action9NumberHours', '$action10ActionNumbers', '$action10TrainedPeople', '$action10NumberHours',
+    '$selectTechnologyManagerManager', '$selectManagerSocialService', '$inputEventRequester', '$selectPortfolioManager', '$inputNameMagistrate',
+    '$dateEventDate', '$dateFolderAssignmentDate', '$dateDeliveryDateAdministrativeLettersSignature', '$dateAcknowledgmentDeliveryDateSignature',
+    '$dateMakingPosterDissemination', '$dateDeliveryDateAdministrativeOffices', '$dateCreationOpeningRegistrationsPlatformCourse',
+    '$dateSendCallsBeforeValidating', '$dateDeliveryConcentratesCertificatesValidation', '$dateFolderDeliveryDate',
+    '$dateConcentratesRecordsValidation', '$dateIntegratedFolderDelivery', '$dateEmptyDataIntoExcelFile',
+    '$dateClearInformationFromTrained', '$dateTimeVariable') ";
+    $columns = '(event_name_of_activity, event_activity_type1, event_activity_type2, event_activity_type3,
+    event_modality, event_action_1_action_numbers, event_action_1_trained_people, event_action_1_number_hours,
+    event_action_2_action_numbers, event_action_2_trained_people, event_action_2_number_hours,
+    event_action_3_action_numbers, event_action_3_trained_people, event_action_3_number_hours,
+    event_action_4_action_numbers, event_action_4_trained_people, event_action_4_number_hours,
+    event_action_5_action_numbers, event_action_5_trained_people, event_action_5_number_hours,
+    event_action_6_action_numbers, event_action_6_trained_people, event_action_6_number_hours,
+    event_action_7_action_numbers, event_action_7_trained_people, event_action_7_number_hours,
+    event_action_8_action_numbers, event_action_8_trained_people, event_action_8_number_hours,
+    event_action_9_action_numbers, event_action_9_trained_people, event_action_9_number_hours,
+    event_action_10_action_numbers, event_action_10_trained_people, event_action_10_number_hours,
+    event_technology_manager_manager, event_manager_social_service, event_event_requester, event_input_portfolio_manager, event_name_magistrate, event_date_event_date, event_date_folder_assignment_date, event_date_delivery_date_administrative_letters_signature, event_date_acknowledgment_delivery_date_signature, event_date_making_poster_dissemination, event_date_delivery_date_administrative_offices, event_date_creation_opening_registrations_platform_course, event_date_send_calls_before_validating, event_date_delivery_concentrates_certificates_validation,  event_date_folder_delivery_date, event_date_concentrates_records_validation, event_date_integrated_folder_delivery, event_date_empty_data_into_excel_file, event_date_clear_information_from_trained, event_last_change_date)';
     $result = $objectEvent->insertEvent ($columns, $data);
     echo $result;
   }
@@ -105,9 +129,9 @@
   }
   
   
-  # GET ALL users via AJAX for DataTable
-  if (isset($_GET['getAllData'])) {
-    ControllerUser::getAllUsersForDataTables ();
+  # GET ALL event via AJAX for DataTable
+  if (isset($_GET['getAllDataEvent'])) {
+    ControllerEvent::getAllEventsForDataTables ();
   }
   
   # DELETE user via Ajax for DataTable
@@ -117,188 +141,16 @@
   }
   
   
-  
   function checkActions ($action)
   {
-    if (!empty($action)){
-     return $action;
-    }else{
-     return '0';
+    if (!empty($action)) {
+      return $action;
+    } else {
+      return '0';
     }
-   
-  }
-
-  
-  function action2 (): void
-  {
-    if (!empty($_POST['action2ActionNumbers'])){
-      $action2ActionNumbers = $_POST['action2ActionNumbers'];
-    }else{
-      $action2ActionNumbers = '0';
-    }
-    if (!empty($_POST['action2TrainedPeople'])){
-      $action2TrainedPeople = $_POST['action2TrainedPeople'];
-    }else{
-      $action2TrainedPeople = '0';
-    }
-    if (!empty($_POST['action2NumberHours'])){
-      $action2NumberHours = $_POST['action2NumberHours'];
-    }else{
-      $action2NumberHours = '0';
-    }
+    
   }
   
-  function action3 (): void
-  {
-    if (!empty($_POST['action3ActionNumbers'])){
-      $action3ActionNumbers = $_POST['action3ActionNumbers'];
-    }else{
-      $action3ActionNumbers = '0';
-    }
-    if (!empty($_POST['action3TrainedPeople'])){
-      $action3TrainedPeople = $_POST['action3TrainedPeople'];
-    }else{
-      $action3TrainedPeople = '0';
-    }
-    if (!empty($_POST['action3NumberHours'])){
-      $action3NumberHours = $_POST['action3NumberHours'];
-    }else{
-      $action3NumberHours = '0';
-    }
-  }
-  
-  function action4 (): void
-  {
-    if (!empty($_POST['action4ActionNumbers'])){
-      $action4ActionNumbers = $_POST['action4ActionNumbers'];
-    }else{
-      $action4ActionNumbers = '0';
-    }
-    if (!empty($_POST['action4TrainedPeople'])){
-      $action4TrainedPeople = $_POST['action4TrainedPeople'];
-    }else{
-      $action4TrainedPeople = '0';
-    }
-    if (!empty($_POST['action4NumberHours'])){
-      $action4NumberHours = $_POST['action4NumberHours'];
-    }else{
-      $action4NumberHours = '0';
-    }
-  }
-  
-  function action5 (): void
-  {
-    if (!empty($_POST['action5ActionNumbers'])){
-      $action5ActionNumbers = $_POST['action5ActionNumbers'];
-    }else{
-      $action5ActionNumbers = '0';
-    }
-    if (!empty($_POST['action5TrainedPeople'])){
-      $action5TrainedPeople = $_POST['action5TrainedPeople'];
-    }else{
-      $action5TrainedPeople = '0';
-    }
-    if (!empty($_POST['action5NumberHours'])){
-      $action5NumberHours = $_POST['action5NumberHours'];
-    }else{
-      $action5NumberHours = '0';
-    }
-  }
-  
-  function action6 (): void
-  {
-    if (!empty($_POST['action6ActionNumbers'])){
-      $action6ActionNumbers = $_POST['action6ActionNumbers'];
-    }else{
-      $action6ActionNumbers = '0';
-    }
-    if (!empty($_POST['action6TrainedPeople'])){
-      $action6TrainedPeople = $_POST['action6TrainedPeople'];
-    }else{
-      $action6TrainedPeople = '0';
-    }
-    if (!empty($_POST['action6NumberHours'])){
-      $action6NumberHours = $_POST['action6NumberHours'];
-    }else{
-      $action6NumberHours = '0';
-    }
-  }
-  
-  function action7 (): void
-  {
-    if (!empty($_POST['action7ActionNumbers'])){
-      $action7ActionNumbers = $_POST['action7ActionNumbers'];
-    }else{
-      $action7ActionNumbers = '0';
-    }
-    if (!empty($_POST['action7TrainedPeople'])){
-      $action7TrainedPeople = $_POST['action7TrainedPeople'];
-    }else{
-      $action7TrainedPeople = '0';
-    }
-    if (!empty($_POST['action7NumberHours'])){
-      $action7NumberHours = $_POST['action7NumberHours'];
-    }else{
-      $action7NumberHours = '0';
-    }
-  }
-  
-  function action8 (): void
-  {
-    if (!empty($_POST['action8ActionNumbers'])){
-      $action8ActionNumbers = $_POST['action8ActionNumbers'];
-    }else{
-      $action8ActionNumbers = '0';
-    }
-    if (!empty($_POST['action8TrainedPeople'])){
-      $action8TrainedPeople = $_POST['action8TrainedPeople'];
-    }else{
-      $action8TrainedPeople = '0';
-    }
-    if (!empty($_POST['action8NumberHours'])){
-      $action8NumberHours = $_POST['action8NumberHours'];
-    }else{
-      $action8NumberHours = '0';
-    }
-  }
-  
-  function action9 (): void
-  {
-    if (!empty($_POST['action9ActionNumbers'])){
-      $action9ActionNumbers = $_POST['action9ActionNumbers'];
-    }else{
-      $action9ActionNumbers = '0';
-    }
-    if (!empty($_POST['action9TrainedPeople'])){
-      $action9TrainedPeople = $_POST['action9TrainedPeople'];
-    }else{
-      $action9TrainedPeople = '0';
-    }
-    if (!empty($_POST['action9NumberHours'])){
-      $action9NumberHours = $_POST['action9NumberHours'];
-    }else{
-      $action9NumberHours = '0';
-    }
-  }
-  
-  function action10 (): void
-  {
-    if (!empty($_POST['action10ActionNumbers'])){
-      $action10ActionNumbers = $_POST['action10ActionNumbers'];
-    }else{
-      $action10ActionNumbers = '0';
-    }
-    if (!empty($_POST['action10TrainedPeople'])){
-      $action10TrainedPeople = $_POST['action10TrainedPeople'];
-    }else{
-      $action10TrainedPeople = '0';
-    }
-    if (!empty($_POST['action10NumberHours'])){
-      $action10NumberHours = $_POST['action10NumberHours'];
-    }else{
-      $action10NumberHours = '0';
-    }
-  }
   
   /**
    * User controller class
@@ -319,7 +171,7 @@
     {
       return $this->model->insertData ($dataColumns, $data);
     }
-
+    
     
     /**
      * This method return a user from with the parameter id
@@ -347,66 +199,47 @@
      *
      * @return void
      */
-    static function getAllUsersForDataTables (): void
+    static function getAllEventsForDataTables (): void
     {
-      $userObject = new ModelUser();
-      $userRoleObject = new ModelUserRole();
+      $eventObject = new ModelEvent();
+      $userNameObject = new ModelUser();
       
-      $queryResult = $userObject->getAllUsersDataTableFormat ();
+      $queryResult = $eventObject->getAllEventsDataTableFormat ();
       $data_array = array();
       
       # The data is sorted to create a new array
       while ($data = $queryResult->fetch_object ()) {
         $data_array[] = array(
-          $data->user_id, // [0] | Id | Column
-          $data->user_id, // [1] | Tools | Column
-          $data->user_image, // [2] | Image | Column
-          $data->user_username, // [3] | User | Column
-          $data->user_role, // [4] | Role | Column
-          $data->user_name, // [5] |
-          $data->user_last_name, // [6] |
-          $data->user_mail, // [7] |
-          $data->user_phone, // [8] |
-          $data->user_date // [9] |
+          $data->event_id, // [0] | Id | Column
+          $data->event_name_of_activity, // [1] | Tools | Column
+          $data->event_id, // [2] | Image | Column
+          $data->event_activity_type1, // [3] | User | Column
+          $data->event_activity_type2, // [4] | Role | Column
+          $data->event_activity_type3, // [5]
+          $data->event_modality, // [6]
+          $data->event_technology_manager_manager, //
+          $data->event_manager_social_service, //
+          $data->event_event_requester, //
+          $data->event_input_portfolio_manager, //
+          $data->event_name_magistrate, //
         );
       }
       
-      # Buttons tools [1]
+      # Add name [7]
       foreach ($data_array as $index => $item) {
-        $data_array[$index][1] = '
-        
-        <div class="btn-group">
-         
-         <form action="userViewProfile" method="post" id="formButtonUserView">
-            <input type="hidden" name="userData" id="userData" value=" ' . $data_array[$index][0] . '" >
-            <button type="submit" class="btn btn-primary btn-flat" style="margin-right: 5px; height: 40px;" title="View profile">
-              <i class="fas fa-pen-to-square"></i>
-            </button>
-          </form>
-          
-          <button type="button" class="btn btn-danger btn-flat" style="margin-right: 5px; height: 40px;" title="Delete user" data-toggle="modal"
-             data-target="#deleteModal" onclick="userDeleteModal(' . $data_array[$index][1] . ',\'' . $data_array[$index][3] . '\')">
-            <i class="fas fa-trash-can"></i>
-          </button>
-          
-        </div>
-     ';
-        
-        # If there is no image path in the field
-        if (!isset($data_array[$index][2]) || $data_array[$index][2] == null || $data_array[$index][2] == '') {
-          $data_array[$index][2] = "views/resources/dist/img/users/no_image.jpg";
-        }
-        
-        $data_array[$index][2] = '<img width="80px" src="' . $data_array[$index][2] . '" class="img-thumbnail" alt="...">';
+        $userName = $userNameObject->getUserName ($item[7]);
+        $data_array[$index][7] = $userName;
       }
-      
-      
-      # Add name of role [4]
+      # Add name [8]
       foreach ($data_array as $index => $item) {
-        $nameOfRole = $userRoleObject->getRoleName ($item[4]);
-        $data_array[$index][4] = $nameOfRole;
+        $userName = $userNameObject->getUserName ($item[8]);
+        $data_array[$index][8] = $userName;
       }
-      
+      # Add name [10]
+      foreach ($data_array as $index => $item) {
+        $userName = $userNameObject->getUserName ($item[10]);
+        $data_array[$index][10] = $userName;
+      }
       
       # An array is created with the data ordered and prepared for the table
       $new_array = array("data" => $data_array);
