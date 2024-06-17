@@ -40,7 +40,7 @@
       <div class="col-12">
 
         <!-- Content -->
-        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
+        <div class="card card-outline card-purple" style="border-top-color: #0e5b44">
 
           <!-- Card header -->
           <div class="card-header">
