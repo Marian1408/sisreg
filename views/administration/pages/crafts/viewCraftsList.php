@@ -82,7 +82,7 @@
             <!-- Craft 1 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Comunicación Social</h5>
-              <a href="comunicacionSocial">
+              <a href="craftComunicacionSocial">
                 <p>Formato del oficio para "Comunicación Social"</p>
               </a>
             </div>
@@ -90,7 +90,7 @@
             <!-- Craft 2 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Espacio de Estacionamiento</h5>
-              <a href="espacioDeEstacionamiento">
+              <a href="craftEspacioDeEstacionamiento">
                 <p>Formato del oficio para "Espacio de Estacionamiento"</p>
               </a>
             </div>
@@ -98,7 +98,7 @@
             <!-- Craft 3 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Invitación Foráneos</h5>
-              <a href="invitacionForaneos">
+              <a href="craftInvitacionForaneos">
                 <p>Formato del oficio de "Invitación Foráneos"</p>
               </a>
             </div>
@@ -106,7 +106,7 @@
             <!-- Craft 4 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Invitación Presencial</h5>
-              <a href="invitacionPresencial">
+              <a href="craftInvitacionPresencial">
                 <p>Formato del oficio de "Invitación Presencial"</p>
               </a>
             </div>
@@ -114,7 +114,7 @@
             <!-- Craft 5 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Invitación Presencial y Virtual</h5>
-              <a href="invitacionPresencialYvirtual">
+              <a href="craftInvitacionPresencialYvirtual">
                 <p>Formato del oficio de "Invitación Presencial y Virtual"</p>
               </a>
             </div>
@@ -122,7 +122,7 @@
             <!-- Craft 6 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Presidenta</h5>
-              <a href="presidenta">
+              <a href="craftPresidenta">
                 <p>Formato del oficio de "Presidenta"</p>
               </a>
             </div>
@@ -130,7 +130,7 @@
             <!-- Craft 7 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Presidium</h5>
-              <a href="presidium">
+              <a href="craftPresidium">
                 <p>Formato del oficio de "Presidium"</p>
               </a>
             </div>
@@ -138,7 +138,7 @@
             <!-- Craft 8 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Presidium Invitación a dar Palabras de Síntesis Curricular</h5>
-              <a href="presidiumInvitacionAdarPalabrasSintesisCurricular">
+              <a href="craftPresidiumInvitacionAdarPalabrasSintesisCurricular">
                 <p>Formato del oficio de "Presidium Invitación a dar Palabras de Síntesis Curricular"</p>
               </a>
             </div>
@@ -146,7 +146,7 @@
             <!-- Craft 9 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Presidium Invitación a dar Palabras</h5>
-              <a href="presidiumInvitacionDarPalabras">
+              <a href="craftPresidiumInvitacionDarPalabras">
                 <p>Formato del oficio de "Presidium Invitación a dar Palabras"</p>
               </a>
             </div>
@@ -154,7 +154,7 @@
             <!-- Craft 10 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Presidium Solo Acompañar</h5>
-              <a href="presidiumSoloAcompanar">
+              <a href="craftPresidiumSoloAcompanar">
                 <p>Formato del oficio de "Presidium Solo Acompañar"</p>
               </a>
             </div>
@@ -162,7 +162,7 @@
             <!-- Craft 11 /-->
             <div class="callout callout-success">
               <h5><i class="nav-icon fas fa-solid fa-file-signature"></i> Oficio de Tecnología</h5>
-              <a href="tecnologia">
+              <a href="craftTecnologia">
                 <p>Formato del oficio de "Tecnología"</p>
               </a>
             </div>

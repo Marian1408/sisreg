@@ -103,8 +103,8 @@
             <?php if ($_SESSION['user_role_name'] == 'Administrador'): ?>
               <!-- User View All Option -->
               <li class="nav-item">
-                <a href="viewAllUsers"
-                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'userViewAll') ?>">
+                <a href="userViewAllUsers"
+                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'userViewAllUsers') ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?php echo 'Ver usuarios'; ?></p>
                 </a>
@@ -112,8 +112,8 @@
 
               <!-- User Add New Option -->
               <li class="nav-item">
-                <a href="addUser"
-                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'userAddNew') ?>">
+                <a href="userAddUser"
+                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'userAddUser') ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?php echo 'Añadir nuevo'; ?></p>
                 </a>
@@ -123,7 +123,7 @@
 
             <!-- User View Profile Option -->
             <li class="nav-item">
-              <a href="viewProfile"
+              <a href="userViewProfile"
                  class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'userViewProfile') ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p><?php echo 'Perfil'; ?></p>
@@ -153,8 +153,8 @@
             <?php if ($_SESSION['user_role_name'] == 'Administrador'): ?>
               <!-- Event View All Option -->
               <li class="nav-item">
-                <a href="viewAllEvents"
-                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventViewAll') ?>">
+                <a href="eventAllEvents"
+                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAllEvents') ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?php echo 'Ver eventos'; ?></p>
                 </a>
@@ -162,8 +162,8 @@
 
               <!-- Event Add New Option -->
               <li class="nav-item">
-                <a href="addEvent"
-                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
+                <a href="eventAddEvent"
+                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddEvent') ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?php echo 'Añadir evento'; ?></p>
                 </a>
@@ -177,7 +177,7 @@
 
         <!-- Craft options ------------------------------------------------------------------------------------------ -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'craft'); ?>">
-          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'craftsList') ?> ">
+          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'craft') ?> ">
             <i class="nav-icon fas fa-solid fa-file-signature"></i>
             <p>
               <?php echo 'Oficios'; ?>
@@ -189,8 +189,8 @@
             
             <!-- Crafts /-->
             <li class="nav-item">
-              <a href="craftsList"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'craftsList') ?>">
+              <a href="craftList"
+                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'craf') ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p><?php echo 'Lista de oficios'; ?></p>
               </a>

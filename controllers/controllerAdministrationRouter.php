@@ -32,59 +32,59 @@
           $this->login ();
           break;
       
-        case ($nameOfMethod === 'craftsList'):
+        case ($nameOfMethod === 'craftList'):
           $this->craftsList ();
           break;
         
-        case ($nameOfMethod === 'comunicacionSocial'):
+        case ($nameOfMethod === 'craftComunicacionSocial'):
           $this->comunicacionSocial ();
           break;
         
-        case ($nameOfMethod === 'espacioDeEstacionamiento'):
+        case ($nameOfMethod === 'craftEspacioDeEstacionamiento'):
           $this->espacioDeEstacionamiento ();
           break;
         
-        case ($nameOfMethod === 'invitacionForaneos'):
+        case ($nameOfMethod === 'craftInvitacionForaneos'):
           $this->invitacionForaneos ();
           break;
         
-        case ($nameOfMethod === 'invitacionPresencial'):
+        case ($nameOfMethod === 'craftInvitacionPresencial'):
           $this->invitacionPresencial ();
           break;
         
-        case ($nameOfMethod === 'invitacionPresencialYvirtual'):
+        case ($nameOfMethod === 'craftInvitacionPresencialYvirtual'):
           $this->invitacionPresencialYvirtual ();
           break;
         
-        case ($nameOfMethod === 'presidenta'):
+        case ($nameOfMethod === 'craftPresidenta'):
           $this->presidenta ();
           break;
         
-        case ($nameOfMethod === 'presidium'):
+        case ($nameOfMethod === 'craftPresidium'):
           $this->presidium ();
           break;
         
-        case ($nameOfMethod === 'presidiumInvitacionAdarPalabrasSintesisCurricular'):
+        case ($nameOfMethod === 'craftPresidiumInvitacionAdarPalabrasSintesisCurricular'):
           $this->presidiumInvitacionAdarPalabrasSintesisCurricular ();
           break;
         
-        case ($nameOfMethod === 'presidiumInvitacionDarPalabras'):
+        case ($nameOfMethod === 'craftPresidiumInvitacionDarPalabras'):
           $this->presidiumInvitacionDarPalabras ();
           break;
         
-        case ($nameOfMethod === 'presidiumSoloAcompanar'):
+        case ($nameOfMethod === 'craftPresidiumSoloAcompanar'):
           $this->presidiumSoloAcompanar ();
           break;
         
-        case ($nameOfMethod === 'tecnologia'):
+        case ($nameOfMethod === 'craftTecnologia'):
           $this->tecnologia ();
           break;
         
         
-        case ($nameOfMethod === 'viewAllEvents'):
+        case ($nameOfMethod === 'eventAllEvents'):
           $this->eventViewAll ();
           break;
-        case ($nameOfMethod === 'addEvent'):
+        case ($nameOfMethod === 'eventAddEvent'):
           $this->eventAddNew ();
           break;
         
@@ -104,11 +104,11 @@
           $this->eventCheckEventAuditorium ();
           break;
         
-        case ($nameOfMethod === 'viewAllUsers'):
+        case ($nameOfMethod === 'userViewAllUsers'):
           $this->userViewAll ();
           break;
         
-        case ($nameOfMethod === 'addUser'):
+        case ($nameOfMethod === 'userAddUser'):
           $this->userAddNew ();
           break;
         
@@ -116,7 +116,7 @@
           $this->userEdit ();
           break;
         
-        case ($nameOfMethod === 'viewProfile'):
+        case ($nameOfMethod === 'userViewProfile'):
           $this->userViewProfile ();
           break;
         
