@@ -1380,6 +1380,7 @@
                                        data-target="#dateConcentratesRecordsValidation"
                                        id="dateConcentratesRecordsValidation"
                                        name="dateConcentratesRecordsValidation"
+                                       required
                                        title="Fecha de concentrados y constancias para validación"/>
                                 <div class="input-group-append" data-target="#dateConcentratesRecordsValidation"
                                      data-toggle="datetimepicker">
@@ -1407,6 +1408,7 @@
                                        data-target="#dateIntegratedFolderDelivery"
                                        id="dateIntegratedFolderDelivery"
                                        name="dateIntegratedFolderDelivery"
+                                       required
                                        title="Fecha de entrega de carpeta integrada para validación"/>
                                 <div class="input-group-append" data-target="#dateIntegratedFolderDelivery"
                                      data-toggle="datetimepicker">
@@ -1433,6 +1435,7 @@
                                        data-target="#dateEmptyDataIntoExcelFile"
                                        id="dateEmptyDataIntoExcelFile"
                                        name="dateEmptyDataIntoExcelFile"
+                                       required
                                        title="Fecha para vaciar datos en archivo Excel"/>
                                 <div class="input-group-append" data-target="#dateEmptyDataIntoExcelFile"
                                      data-toggle="datetimepicker">
@@ -1459,6 +1462,7 @@
                                        class="form-control datetimepicker-input"
                                        data-target="#dateClearInformationFromTrained"
                                        name="dateClearInformationFromTrained"
+                                       required
                                        title="Fecha para vaciar información del personal capacitado en archivo Excel"/>
                                 <div class="input-group-append" data-target="#dateClearInformationFromTrained"
                                      data-toggle="datetimepicker">

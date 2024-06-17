@@ -218,12 +218,22 @@
       return $this->model->getById ($id);
     }
     
+    function getAllEvents (): int|bool|array
+    {
+      return $this->model->getAll ();
+    }
+    
+    function getById ($id): int|bool|array
+    {
+      return $this->model->getById ($id);
+    }
+    
     /**
      * This method return the total number of rows of the table
      *
      * @return array|bool|int
      */
-    function getAllUsersTotal (): int|bool|array
+    function getAllEventsTotal (): int|bool|array
     {
       return $this->model->getAllTotal ();
     }
@@ -321,7 +331,30 @@
         );
       }
       
-      # Add name [3]
+      foreach ($data_array as $index => $item) {
+        $data_array[$index][2] = '
+        
+          <div class="btn-group">
+           
+           <!-- View button -->
+           <form action="eventDetails" method="post" id="formButtonEventView">
+              <input  type="hidden"
+                      name="eventData"
+                      id="eventData"
+                      value=" ' . $data_array[$index][2] . '" >
+              <button type="submit"
+                      class="btn btn-primary btn-flat cltm-tools-buttons"
+                      title="Ver evento">
+                <i class="fas fa-regular fa-eye"></i>
+              </button>
+            </form>
+            
+          </div>
+        ';
+        }
+        
+        
+        # Add name [3]
       foreach ($data_array as $index => $item) {
         $activityName = $activityObject->getActivityName ('1', $item[3]);
         $data_array[$index][3] = $activityName;

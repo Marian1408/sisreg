@@ -137,6 +137,7 @@
 
         <!-- Event logs options ------------------------------------------------------------------------------------------ -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'event'); ?>">
+        
           <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'event') ?> ">
             <i class="nav-icon fas fa-calendar-days"></i>
             <p>
@@ -144,6 +145,8 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
+          
+          
           <ul class="nav nav-treeview">
             
             
@@ -173,8 +176,8 @@
 
 
         <!-- Craft options ------------------------------------------------------------------------------------------ -->
-        <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'event'); ?>">
-          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'event') ?> ">
+        <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'craft'); ?>">
+          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'craftsList') ?> ">
             <i class="nav-icon fas fa-solid fa-file-signature"></i>
             <p>
               <?php echo 'Oficios'; ?>
@@ -187,7 +190,7 @@
             <!-- Crafts /-->
             <li class="nav-item">
               <a href="craftsList"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAddNew') ?>">
+                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'craftsList') ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p><?php echo 'Lista de oficios'; ?></p>
               </a>

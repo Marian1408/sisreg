@@ -92,6 +92,10 @@
           $this->eventEdit ();
           break;
         
+        case ($nameOfMethod === 'eventDetails'):
+          $this->eventDetails ();
+          break;
+        
         case ($nameOfMethod === 'eventCheckEventCompliance'):
           $this->eventCheckEventCompliance ();
           break;
@@ -279,6 +283,11 @@
     private function eventEdit (): void
     {
       include "views/administration/pages/event/viewUserEdit.php";
+    }
+    
+    private function eventDetails (): void
+    {
+      include "views/administration/pages/event/viewEventDetails.php";
     }
     
     private function eventCheckEventCompliance (): void
