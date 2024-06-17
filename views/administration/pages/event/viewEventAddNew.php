@@ -507,7 +507,7 @@
 
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <p>Actividades de Divulgación Juves de Conferencia</p>
+                                      <p>Actividades de Divulgación Jueves de Conferencia</p>
                                     </div>
                                   </div>
 
@@ -656,7 +656,7 @@
 
                                   <div class="col-md-6">
                                     <div class="form-group">
-                                      <p>Talleres Dirigidos al Personal Jurisdiccional y Adminitrativo</p>
+                                      <p>Talleres Dirigidos al Personal Jurisdiccional y Administrativo</p>
                                     </div>
                                   </div>
 
@@ -1709,7 +1709,6 @@
     });
   });
 
-
   // Form event function
   $('#addNewEventForm').on('blur keyup change input', function (event) {
     validateForm('#addNewEventForm');
@@ -1752,6 +1751,9 @@
     });
   });
 
+  /**
+   * Successful save record event modal
+   */
   function modalSuccessfulSaveRecordEvent() {
     Swal.fire({
       title: 'Registro guardado',
@@ -1764,6 +1766,9 @@
     })
   }
 
+  /**
+   * Error save record event modal
+   */
   function modalErrorSaveRecordEvent() {
     Swal.fire({
       title: 'Error al guardar',

@@ -74,7 +74,7 @@
       $sth = $this->connectionPDO->prepare ($sql);
       $sth->execute ();
       $result = $sth->fetch (PDO::FETCH_ASSOC);
-      return $result['user_name'] .  $result['user_last_name'];
+      return $result['user_name'] .' '. $result['user_last_name'];
     }
     
     

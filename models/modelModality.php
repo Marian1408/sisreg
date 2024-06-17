@@ -39,4 +39,16 @@
       return parent::getAll ();
     }
     
+    public function getModalityName ($id): string
+    {
+      parent::__construct ($this->prefixTableName);
+      $table = $this->prefixTableName;
+      $sql = "SELECT * FROM $table WHERE id = '$id'";
+      $connection = parent::getConnectionPDO ();
+      $sth = $connection->prepare ($sql);
+      $sth->execute ();
+      $result = $sth->fetch (PDO::FETCH_ASSOC);
+      return $result['name'];
+    }
+    
   }

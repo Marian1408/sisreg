@@ -39,4 +39,9 @@
       return $this->model->getAllModality ();
     }
     
+    public function getModalityName ($id): string
+    {
+      return $this->model->getModalityName ($id);
+    }
+    
   }

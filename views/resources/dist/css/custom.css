@@ -235,3 +235,7 @@ h5.subtitle-section {
 .callout a:hover {
   color: #458d6e !important;
 }
+
+div.dt-button-collection {
+  width: auto !important;
+}

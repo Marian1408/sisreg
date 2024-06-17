@@ -39,4 +39,9 @@
       return $this->model->getAllActivities ($number);
     }
     
+    public function getActivityName (string $number='1', $id): string
+    {
+      return $this->model->getActivityName ($number, $id);
+    }
+    
   }

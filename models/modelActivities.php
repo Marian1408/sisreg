@@ -26,6 +26,7 @@
     public function __construct ()
     {
       $this->prefixTableName = 'opt_activities';
+      
     }
     
     /**
@@ -38,6 +39,18 @@
     {
       parent::__construct ($this->prefixTableName.$number);
       return parent::getAll ();
+    }
+    
+    public function getActivityName (string $number='1', $id): string
+    {
+      parent::__construct ($this->prefixTableName.$number);
+      $table = $this->prefixTableName.$number;
+      $sql = "SELECT * FROM $table WHERE id = '$id'";
+      $connection = parent::getConnectionPDO ();
+      $sth = $connection->prepare ($sql);
+      $sth->execute ();
+      $result = $sth->fetch (PDO::FETCH_ASSOC);
+      return $result['name'];
     }
     
   }

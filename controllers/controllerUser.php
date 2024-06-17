@@ -186,4 +186,9 @@
       echo $this->model->deleteById ($id);
     }
     
+    public function getUserName (int $id): string
+    {
+      return $this->model->getUserName ($id);
+    }
+    
   }
