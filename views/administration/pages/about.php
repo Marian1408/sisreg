@@ -11,14 +11,14 @@
    */
 ?>
 
-<!-- Header content -->
+<!-- Header /-->
 <section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
 
       <!-- Title -->
       <div class="col-sm-6">
-        <h1><b>Acerca de</b></h1>
+        <h1><b>Acerca de..</b></h1>
       </div>
 
       <!-- Icon page -->
@@ -32,23 +32,23 @@
   </div>
 </section>
 
-<!-- Main content -->
+<!-- Content /-->
 <section class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
 
         <!-- Content -->
-        <div class="card card-outline card-lightblue" style="border-top-color: #0e5b44">
+        <div class="card card-outline card-olive">
 
-          <!-- Card header -->
+          <!-- Card header /-->
           <div class="card-header">
 
             <!-- Subtitle -->
-            <h5 class="card-title" style="font-size: 1.25rem;">
+            <h5 class="card-title">
               <i class="fa-solid fa-circle-info"></i>
               <b>Acerca del sistema</b>
-              </h5>
+            </h5>
 
             <!-- Card tools -->
             <div class="card-tools">
@@ -82,7 +82,7 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-window-restore"></i>
-                <b> Acerca de SISREG / Sistema de Registro</b>
+                 Acerca de SISREG / Sistema de Registro
               </h5>
               <hr>
               <div class="card-body text-center">
@@ -94,8 +94,8 @@
                 <p style="font-size: 1.5rem;"><b> SISREG</b></p>
                 <hr>
                 <p style="font-size: 1.2rem;">Sistema de Registro</p>
-                <p>Sistema para el registro de eventos y actividades del Poder Judicial del Estado de Veracruz y la Escuela Judicial del Estado de Veracruz</p>
-
+                <p>Sistema para el registro de eventos y actividades del Poder Judicial del Estado de Veracruz y la
+                  Escuela Judicial del Estado de Veracruz</p>
               </div>
             </div>
 
@@ -103,13 +103,13 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-gear"></i>
-                <b> Construido con </b>
+                Construido con
               </h5>
               <p>Este proyecto está construido con las siguientes tecnologías:</p>
               <hr>
               <!-- Programming Languages -->
               <i class="fa-solid fa-code"></i>
-              <b>Lenguajes de programación</b>
+              Lenguajes de programación
               <ul>
                 <li class="cltm-li"><a href="https://www.php.net/">PHP 8.2</a></li>
                 <li class="cltm-li"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
@@ -132,7 +132,8 @@
               <i class="fa-solid fa-code"></i> <b>Bibliotecas </b>
               <ul>
                 <li class="cltm-li"><a class="cltm-callout" href="https://jquery.com/">jQuery 3.5.1+y</a></li>
-                <li class="cltm-li"><a class="cltm-callout" href="https://floating-ui.com/?utm_source=popper.js.org">Popper.js 1.16.1+</a>
+                <li class="cltm-li"><a class="cltm-callout" href="https://floating-ui.com/?utm_source=popper.js.org">Popper.js
+                    1.16.1+</a>
                 </li>
                 <li class="cltm-li"><a class="cltm-callout" href="https://datatables.net/">DataTables</a></li>
               </ul>
@@ -142,7 +143,8 @@
               <ul>
                 <li class="cltm-li"><a class="cltm-callout" href="https://fontawesome.com/">FontAwesome 5</a></li>
                 <li class="cltm-li"><a class="cltm-callout" href="https://ionic.io/ionicons">Ionicons</a></li>
-                <li class="cltm-li"><a class="cltm-callout" href="https://github.com/lipis/flag-icons#readme">Flag-Icons-CSS</a></li>
+                <li class="cltm-li"><a class="cltm-callout" href="https://github.com/lipis/flag-icons#readme">Flag-Icons-CSS</a>
+                </li>
               </ul>
 
               <!-- Notifications -->
@@ -162,11 +164,12 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-code-branch"></i>
-                <b> Version </b>
+                Version
               </h5>
               <hr>
               <ul>
-                <li class="cltm-li"><a class="cltm-callout" href="github.com/gcamarenaprog/cltm">Version 1.0.0 | May 2024</a></li>
+                <li class="cltm-li"><a class="cltm-callout" href="github.com/gcamarenaprog/cltm">Version 1.0.0 | May
+                    2024</a></li>
               </ul>
             </div>
 
@@ -174,7 +177,7 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-regular fa-circle-user"></i>
-                <b> Autor</b>
+                Autor
               </h5>
               <p>María Marina Vázquez Hernández</p>
               <hr>
@@ -183,14 +186,14 @@
                 <dd class="col-sm-11"><a href="mailto:mia140898@gmail.com">
                     mia140898@gmail.com</a></dd>
               </dl>
-             
+
             </div>
-            
+
           </div>
 
           <!-- Card footer -->
           <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
-            <em><?php echo SYSTEM_FULL_NAME; ?> <?php echo SYSTEM_VERSION; ?></em>
+            <em><?php echo SYSTEM_FULL_NAME; ?></em>
           </div>
 
         </div>

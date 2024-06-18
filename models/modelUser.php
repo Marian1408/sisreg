@@ -26,6 +26,12 @@
       parent::__construct ('users', 'user_id');
     }
     
+    
+    public function insertData ($dataColumns, $data): int|bool
+    {
+      return parent::insert ($dataColumns, $data);
+    }
+    
     /**
      * Check exist a user if username and password match in database and return a row with the user data.
      *

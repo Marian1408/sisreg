@@ -68,7 +68,7 @@
 
           <!-- Users count -->
           <div class="col-lg-4 col-md-6">
-            <div class="small-box bg-gradient-green" style="background: #0e5b44 linear-gradient(180deg, #087f4a, #0e5b44) repeat-x !important; ">
+            <div class="small-box bg-gradient-green">
               <div class="inner">
                 <h3><?php echo $userTotal; ?></h3>
                 <h4>Usuarios</h4>
@@ -85,7 +85,7 @@
 
           <!-- Events count -->
           <div class="col-lg-4 col-md-6">
-            <div class="small-box bg-gradient-green" style="background: #0e5b44 linear-gradient(180deg, #087f4a, #0e5b44) repeat-x !important; ">
+            <div class="small-box bg-gradient-green">
               <div class="inner">
                 <h3><?php echo $eventTotal; ?></h3>
                 <h4>Eventos</h4>
@@ -102,7 +102,7 @@
 
           <!-- Crafts count -->
           <div class="col-lg-4 col-md-6">
-            <div class="small-box bg-gradient-green" style="background: #0e5b44 linear-gradient(180deg, #087f4a, #0e5b44) repeat-x !important; ">
+            <div class="small-box bg-gradient-green">
               <div class="inner">
                 <h3>11</h3>
                 <h4>Oficios</h4>
@@ -139,7 +139,7 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-window-restore"></i>
-                <b> Acerca de SISREG / Sistema de Registro</b>
+                 Acerca de SISREG / Sistema de Registro
               </h5>
               <hr>
               <div class="card-body text-center">
@@ -172,7 +172,7 @@
             <div class="callout callout-success">
               <h5 class="cltm-card-subtitle-1">
                 <i class="fa-solid fa-gear"></i>
-                <b> Construido con </b>
+                 Construido con
               </h5>
               <p>Este proyecto está construido con las siguientes tecnologías:</p>
               <hr>

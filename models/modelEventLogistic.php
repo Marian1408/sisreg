@@ -5,7 +5,7 @@
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           Model file
-   * File description:    Event model
+   * File description:    Event Logistic model
    * Package:             Models
    * -------------------------------------------------------------------------------------------------------------------
    */
@@ -13,9 +13,9 @@
   require_once (__DIR__ . '/modelGeneric.php');
   
   /**
-   * This class defines the Event model class
+   * This class defines the Event Logisitic model class
    */
-  class ModelEvent extends ModelGeneric
+  class ModelEventLogistic extends ModelGeneric
   {
     
     /**
@@ -23,7 +23,7 @@
      */
     public function __construct ()
     {
-      parent::__construct ('events', 'event_id');
+      parent::__construct ('events_logistic',  'event_logistic_id');
     }
     
     
@@ -32,7 +32,7 @@
      *
      * @return bool|mysqli_result
      */
-    public function getAllEventsDataTableFormat (): mysqli_result|bool
+    public function getAllEventsLogisticDataTableFormat (): mysqli_result|bool
     {
       $sql = "SELECT * FROM $this->table";
       $connection = $this->connectionMysqli;
@@ -44,7 +44,7 @@
       return parent::insert ($dataColumns, $data);
     }
     
-    public function getAllEventsTotalWithUserId ($id): bool|int
+    public function getAllEventsLogisticTotalWithUserId ($id): bool|int
     {
       $sql = " SELECT COUNT(*) FROM {$this->table} WHERE event_technology_manager_manager = '$id' OR event_manager_social_service = '$id' OR event_input_portfolio_manager = '$id'";
       $statement = $this->connectionPDO->prepare ($sql);
@@ -53,7 +53,7 @@
     }
     
     
-    public function getAllEventsWithId ($id): bool|array
+    public function getAllEventsLogisticWithId ($id): bool|array
     {
       $sql = " SELECT * FROM {$this->table} WHERE event_technology_manager_manager = '$id' OR event_manager_social_service = '$id' OR event_input_portfolio_manager = '$id'";
       $statement = $this->connectionPDO->prepare ($sql);

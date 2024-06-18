@@ -10,6 +10,7 @@
    * -------------------------------------------------------------------------------------------------------------------
    */
   
+  # Required files
   require_once (dirname (__DIR__, 1) . '/includes/functions.php');
   require_once (dirname (__DIR__, 1) . '/models/modelActivities.php');
   
@@ -29,7 +30,7 @@
     }
     
     /**
-     * Gets the list of activities depending on the number passed as a parameter
+     * Obtiene la lista de actividades de la tabla,
      *
      * @param string $number
      * @return int|bool|array
@@ -39,6 +40,11 @@
       return $this->model->getAllActivities ($number);
     }
     
+    /**
+     * @param string $number
+     * @param        $id
+     * @return string
+     */
     public function getActivityName (string $number='1', $id): string
     {
       return $this->model->getActivityName ($number, $id);

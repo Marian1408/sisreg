@@ -44,8 +44,8 @@
   color: #fff;
 }
 
-.sisreg-card-title {
-  color:white;
+.sisreg-color-white {
+  color: white;
 }
 
 .sisreg-form-help {
@@ -223,7 +223,7 @@ h5.subtitle-section {
 
 
 /* Overridden styles */
-.card-primary.card-outline {
+.card-olive.card-outline {
   border-top: 3px solid #062f1d !important;
 }
 
@@ -236,6 +236,19 @@ h5.subtitle-section {
   color: #458d6e !important;
 }
 
+.bg-gradient-green {
+  background: #0e5b44 linear-gradient(180deg, #087f4a, #0e5b44) repeat-x !important;
+}
+
 div.dt-button-collection {
   width: auto !important;
+}
+
+.navbar-badge {
+  font-size: 11px !important;
+  font-weight: 300;
+  padding: 2px 4px;
+  position: absolute;
+  right: 10px !important;
+  top: 7px !important;
 }

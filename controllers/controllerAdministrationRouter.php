@@ -5,14 +5,13 @@
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           Controller
-   * File description:    Main controller which calls its methods through the URL which is divided
-   *                      in two parameters: For example: https://localhost/controller/method
+   * File description:    Router driver for administration, gets URL parameters to determine which view to call.
    * Package:             Controllers
    * -------------------------------------------------------------------------------------------------------------------
    */
   
   /**
-   * Router controller class
+   * Administration router controller class
    */
   class controllerAdministrationRouter
   {
@@ -20,112 +19,111 @@
     /**
      * Checks if the method being called exists, if not use the default method
      *
-     * @param $nameOfMethod string <p>Name of method to execute</p>
+     * @param $nameOfView string <p>Name of method to execute</p>
      * @return void
      */
-    public function selectView (string $nameOfMethod): void
+    public function selectView (string $nameOfView): void
     {
       
-      switch ($nameOfMethod) {
+      switch ($nameOfView) {
         
-        case ($nameOfMethod === 'login'):
+        case ($nameOfView === 'login'):
           $this->login ();
           break;
-      
-        case ($nameOfMethod === 'craftList'):
-          $this->craftsList ();
+        
+        
+        case ($nameOfView === 'documentList'):
+          $this->documentList ();
           break;
         
-        case ($nameOfMethod === 'craftComunicacionSocial'):
-          $this->comunicacionSocial ();
+        case ($nameOfView === 'documentComunicacionSocial'):
+          $this->documentComunicacionSocial ();
           break;
         
-        case ($nameOfMethod === 'craftEspacioDeEstacionamiento'):
-          $this->espacioDeEstacionamiento ();
+        case ($nameOfView === 'documentEspacioDeEstacionamiento'):
+          $this->documentEspacioDeEstacionamiento ();
           break;
         
-        case ($nameOfMethod === 'craftInvitacionForaneos'):
-          $this->invitacionForaneos ();
+        case ($nameOfView === 'documentInvitacionForaneos'):
+          $this->documentInvitacionForaneos ();
           break;
         
-        case ($nameOfMethod === 'craftInvitacionPresencial'):
-          $this->invitacionPresencial ();
+        case ($nameOfView === 'documentInvitacionPresencial'):
+          $this->documentInvitacionPresencial ();
           break;
         
-        case ($nameOfMethod === 'craftInvitacionPresencialYvirtual'):
-          $this->invitacionPresencialYvirtual ();
+        case ($nameOfView === 'documentInvitacionPresencialYvirtual'):
+          $this->documentInvitacionPresencialYvirtual ();
           break;
         
-        case ($nameOfMethod === 'craftPresidenta'):
-          $this->presidenta ();
+        case ($nameOfView === 'documentPresidenta'):
+          $this->documentPresidenta ();
           break;
         
-        case ($nameOfMethod === 'craftPresidium'):
-          $this->presidium ();
+        case ($nameOfView === 'documentPresidium'):
+          $this->documentPresidium ();
           break;
         
-        case ($nameOfMethod === 'craftPresidiumInvitacionAdarPalabrasSintesisCurricular'):
-          $this->presidiumInvitacionAdarPalabrasSintesisCurricular ();
+        case ($nameOfView === 'documentPresidiumInvitacionAdarPalabrasSintesisCurricular'):
+          $this->documentPresidiumInvitacionAdarPalabrasSintesisCurricular ();
           break;
         
-        case ($nameOfMethod === 'craftPresidiumInvitacionDarPalabras'):
-          $this->presidiumInvitacionDarPalabras ();
+        case ($nameOfView === 'documentPresidiumInvitacionDarPalabras'):
+          $this->documentPresidiumInvitacionDarPalabras ();
           break;
         
-        case ($nameOfMethod === 'craftPresidiumSoloAcompanar'):
-          $this->presidiumSoloAcompanar ();
+        case ($nameOfView === 'documentPresidiumSoloAcompanar'):
+          $this->documentPresidiumSoloAcompanar ();
           break;
         
-        case ($nameOfMethod === 'craftTecnologia'):
-          $this->tecnologia ();
+        case ($nameOfView === 'documentTecnologia'):
+          $this->documentTecnologia ();
           break;
         
         
-        case ($nameOfMethod === 'eventAllEvents'):
+        case ($nameOfView === 'eventAllEvents'):
           $this->eventViewAll ();
           break;
-        case ($nameOfMethod === 'eventAddEvent'):
+        
+        case ($nameOfView === 'eventAddEvent'):
           $this->eventAddNew ();
           break;
         
-        case ($nameOfMethod === 'eventEdit'):
-          $this->eventEdit ();
-          break;
-        
-        case ($nameOfMethod === 'eventDetails'):
+        case ($nameOfView === 'eventDetails'):
           $this->eventDetails ();
           break;
         
-        case ($nameOfMethod === 'eventCheckEventCompliance'):
-          $this->eventCheckEventCompliance ();
+        case ($nameOfView === 'eventCheckEvent'):
+          $this->eventCheckEvent ();
           break;
         
-        case ($nameOfMethod === 'eventCheckEventAuditorium'):
-          $this->eventCheckEventAuditorium ();
+        case ($nameOfView === 'viewEventCheckViewAll'):
+          $this->viewEventCheckViewAll ();
           break;
         
-        case ($nameOfMethod === 'userViewAllUsers'):
+        
+        case ($nameOfView === 'userViewAllUsers'):
           $this->userViewAll ();
           break;
         
-        case ($nameOfMethod === 'userAddUser'):
+        case ($nameOfView === 'userAddUser'):
           $this->userAddNew ();
           break;
         
-        case ($nameOfMethod === 'userEdit'):
+        case ($nameOfView === 'userEdit'):
           $this->userEdit ();
           break;
         
-        case ($nameOfMethod === 'userViewProfile'):
+        case ($nameOfView === 'userViewProfile'):
           $this->userViewProfile ();
           break;
         
-        case ($nameOfMethod === 'about'):
+        case ($nameOfView === 'about'):
           $this->about ();
           break;
         
-        case ($nameOfMethod === 'base'):
-          $this->base ();
+        case ($nameOfView === 'test'):
+          $this->test ();
           break;
         
         default:
@@ -142,7 +140,7 @@
     
     
     /**
-     * Load the admin view
+     * Load the administration home view
      *
      * @return void
      */
@@ -152,7 +150,7 @@
     }
     
     /**
-     * Load the boss view
+     * Load the boss administration home view
      *
      * @return void
      */
@@ -162,7 +160,7 @@
     }
     
     /**
-     * Load the user view
+     * Load the user administration home view
      *
      * @return void
      */
@@ -181,36 +179,6 @@
       header ("Location: login.php");
     }
     
-    /**
-     * Load the craft view
-     *
-     * @return void
-     */
-    public function craft (): void
-    {
-      include "views/administration/pages/craft1.php";
-    }
-    
-    
-    /**
-     * Load the about view
-     *
-     * @return void
-     */
-    public function about (): void
-    {
-      include "views/administration/pages/about.php";
-    }
-    
-    /**
-     * Load the base view
-     *
-     * @return void
-     */
-    public function base (): void
-    {
-      include "views/administration/pages/base.php";
-    }
     
     /**
      * Load the user view all view
@@ -276,90 +244,175 @@
     }
     
     /**
-     * Load the event edit view
+     * Load event details view
      *
      * @return void
      */
-    private function eventEdit (): void
-    {
-      include "views/administration/pages/event/viewUserEdit.php";
-    }
-    
     private function eventDetails (): void
     {
       include "views/administration/pages/event/viewEventDetails.php";
     }
     
-    private function eventCheckEventCompliance (): void
+    /**
+     * Load event check event view
+     *
+     * @return void
+     */
+    private function eventCheckEvent (): void
     {
-      include "views/administration/pages/event/viewEventCheckEventCompliance.php";
+      include "views/administration/pages/event/viewEventCheckEvent.php";
     }
     
-    private function eventCheckEventAuditorium (): void
+    /**
+     * Load event check view all view
+     *
+     * @return void
+     */
+    private function viewEventCheckViewAll (): void
     {
-      include "views/administration/pages/event/viewEventCheckEventAuditorium.php";
+      include "views/administration/pages/event/viewEventCheckViewAll.php";
     }
     
     
-    private function craftsList (): void
+    /**
+     * Calls the document list view
+     *
+     * @return void
+     */
+    private function documentList (): void
     {
-      include "views/administration/pages/crafts/viewCraftsList.php";
+      include "views/administration/pages/document/viewDocumentList.php";
     }
     
-    private function comunicacionSocial (): void
+    /**
+     * Calls the document view "Comunicación social"
+     *
+     * @return void
+     */
+    private function documentComunicacionSocial (): void
     {
-      include "views/administration/pages/crafts/viewComunicacionSocial.php";
+      include "views/administration/pages/document/viewDocumentComunicacionSocial.php";
     }
     
-    private function espacioDeEstacionamiento (): void
+    /**
+     * Calls the document view "Espacio de estacionamiento"
+     *
+     * @return void
+     */
+    private function documentEspacioDeEstacionamiento (): void
     {
-      include "views/administration/pages/crafts/viewEspacioDeEstacionamiento.php";
+      include "views/administration/pages/document/viewDocumentEspacioDeEstacionamiento.php";
     }
     
-    private function invitacionForaneos (): void
+    /**
+     * Calls the document view "Invitación de foráneos"
+     *
+     * @return void
+     */
+    private function documentInvitacionForaneos (): void
     {
-      include "views/administration/pages/crafts/viewInvitacionForaneos.php";
+      include "views/administration/pages/document/viewDocumentInvitacionForaneos.php";
     }
     
-    private function invitacionPresencial (): void
+    /**
+     * Calls the document view "Invitación presencial"
+     *
+     * @return void
+     */
+    private function documentInvitacionPresencial (): void
     {
-      include "views/administration/pages/crafts/viewInvitacionPresencial.php";
+      include "views/administration/pages/document/viewDocumentInvitacionPresencial.php";
     }
     
-    private function invitacionPresencialYvirtual (): void
+    /**
+     * Calls the document view "Invitación presencial y virtual"
+     *
+     * @return void
+     */
+    private function documentInvitacionPresencialYvirtual (): void
     {
-      include "views/administration/pages/crafts/viewInvitacionPresencialYvirtual.php";
+      include "views/administration/pages/document/viewDocumentInvitacionPresencialYvirtual.php";
     }
     
-    private function presidenta (): void
+    /**
+     * Calls the document view "Presidenta"
+     *
+     * @return void
+     */
+    private function documentPresidenta (): void
     {
-      include "views/administration/pages/crafts/viewPresidenta.php";
+      include "views/administration/pages/document/viewDocumentPresidenta.php";
     }
     
-    private function presidium (): void
+    /**
+     * Calls the document view "Presidium"
+     *
+     * @return void
+     */
+    private function documentPresidium (): void
     {
-      include "views/administration/pages/crafts/viewPresidium.php";
+      include "views/administration/pages/document/viewDocumentPresidium.php";
     }
     
-    private function presidiumInvitacionAdarPalabrasSintesisCurricular (): void
+    /**
+     * Calls the document view "Presidium invitación a dar palabras síntesis curricular"
+     *
+     * @return void
+     */
+    private function documentPresidiumInvitacionAdarPalabrasSintesisCurricular (): void
     {
-      include "views/administration/pages/crafts/viewPresidiumInvitacionAdarPalabrasSintesisCurricular.php";
+      include "views/administration/pages/document/viewDocumentPresidiumInvitacionAdarPalabrasSintesisCurricular.php";
     }
     
-    private function presidiumInvitacionDarPalabras (): void
+    /**
+     * Calls the document view "Presidium invitación a dar palabras"
+     *
+     * @return void
+     */
+    private function documentPresidiumInvitacionDarPalabras (): void
     {
-      include "views/administration/pages/crafts/viewPresidiumInvitacionDarPalabras.php";
+      include "views/administration/pages/document/viewDocumentPresidiumInvitacionDarPalabras.php";
     }
     
-    private function presidiumSoloAcompanar (): void
+    /**
+     * Calls the document view "Presidium solo acompañar"
+     *
+     * @return void
+     */
+    private function documentPresidiumSoloAcompanar (): void
     {
-      include "views/administration/pages/crafts/viewPresidiumSoloAcompanar.php";
+      include "views/administration/pages/document/viewDocumentPresidiumSoloAcompanar.php";
     }
     
-    private function tecnologia (): void
+    /**
+     * Calls the document view "Tecnologá"
+     *
+     * @return void
+     */
+    private function documentTecnologia (): void
     {
-      include "views/administration/pages/crafts/viewTecnologia.php";
+      include "views/administration/pages/document/viewDocumentTecnologia.php";
     }
     
+    /**
+     * Load the about view
+     *
+     * @return void
+     */
+    public function about (): void
+    {
+      include "views/administration/pages/about.php";
+    }
+    
+    
+    /**
+     * Load the test view
+     *
+     * @return void
+     */
+    public function test (): void
+    {
+      include "views/administration/pages/test.php";
+    }
     
   }

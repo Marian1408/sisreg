@@ -11,13 +11,13 @@
    */
 ?>
 
-<!-- Image logo -->
+<!-- Logo /-->
 <div style=" text-align: center;">
   <img src="views/resources/dist/img/logo_sisreg_.png" alt="Photo">
 </div>
 
 
-<!-- Header content -->
+<!-- Header /-->
 <section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
@@ -39,7 +39,7 @@
   </div>
 </section>
 
-<!-- Main content -->
+<!-- Content /-->
 <section class="content">
   <div class="container-fluid">
     <div class="row">

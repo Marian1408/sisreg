@@ -9,6 +9,18 @@
    * Package:             Views
    * -------------------------------------------------------------------------------------------------------------------
    */
+  
+  require_once ('controllers/controllerUser.php');
+  require_once ('controllers/controllerEvent.php');
+  
+  $userObject = new ControllerUser();
+  $userTotal = $userObject->getAllUsersTotal ();
+  
+  //print_r ($_SESSION);
+  
+  $eventObject = new ControllerEvent();
+  $eventsTotal = $eventObject->getAllEventsTotalWithUserId ($_SESSION['user_id']);
+
 ?>
 
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -26,9 +38,9 @@
         <i class="fas fa-bars"></i>
       </a>
     </li>
-    
+
   </ul>
- 
+
   <!-- Right navbar /-->
   <ul class="navbar-nav ml-auto">
 
@@ -77,6 +89,26 @@
 
       </div>
 
+    </li>
+
+    <!-- Events menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#" title="Notificaciones">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">
+          <?php echo $eventsTotal; ?>
+        </span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-item dropdown-header"> <?php echo $eventsTotal; ?> Eventos</span>
+        
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-calendar-days mr-2"></i> 4 eventos asignados
+          <span class="float-right text-muted text-sm">3 mins</span>
+        </a>
+
+      </div>
     </li>
 
     <!-- Fullscreen button -->

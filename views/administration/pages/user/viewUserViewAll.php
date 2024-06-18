@@ -5,11 +5,13 @@
    * Project description: Activity control and monitoring system
    * Version:             1.0.0
    * File type:           View file
-   * File description:    This file show the list of users with access to the system screen.
+   * File description:    This file show the list of users screen.
    * Package:             Views
    * -------------------------------------------------------------------------------------------------------------------
    */
 ?>
+
+<!-- Head /-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,70 +29,74 @@
 
 </head>
 
-<!-- Header content -->
-<section class="content-header">
+<!-- Header /-->
+<div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
-      
+
       <!-- Title -->
       <div class="col-sm-6">
-        <h1>Usuarios</h1>
+        <h1><b>Usuarios</b></h1>
       </div>
-      
+
       <!-- Icon page -->
       <div class="col-sm-6 icon-page">
         <ol class="breadcrumb float-sm-right">
           <i class="fa fa-users"></i>
         </ol>
       </div>
-    
+
     </div>
   </div>
-</section>
+</div>
 
-<!-- Main content -->
-<section class="content">
+<!-- Content /-->
+<div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        
+
         <!-- Content -->
-        <div class="card card-outline card-lightblue">
-          
+        <div class="card card-outline card-olive">
+
           <!-- Card header -->
           <div class="card-header">
-            
+
             <!-- Subtitle -->
-            <h5 class="card-title">Lista de usuarios con acceso al sistema</h5>
-            
+            <h5 class="card-title">
+              <i class="fa fa-users"></i>
+              <b>Lista de usuarios</b>
+            </h5>
+
             <!-- Card tools -->
             <div class="card-tools">
-              
+
               <!-- Minimize button -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse"
                       title="Minimizar">
                 <i class="fas fa-minus"></i>
               </button>
-              
+
               <!-- Refresh button -->
               <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html"
                       data-source-selector="#card-refresh-content" data-load-on-init="false"
                       title="Actualizar">
                 <i class="fas fa-sync-alt"></i>
               </button>
-              
+
               <!-- Maximize button -->
               <button type="button" class="btn btn-tool" data-card-widget="maximize"
                       title="Maximizar"><i class="fas fa-expand"></i>
               </button>
-            
+
             </div>
-          
+
           </div>
-          
+
           <!-- Card body (table) -->
           <div class="card-body">
             <table id="tableUsers" class="table table-bordered table-striped">
+
               <thead>
               <tr>
                 <th>ID</th>
@@ -105,9 +111,10 @@
                 <th>Fecha de creación</th>
               </tr>
               </thead>
+
               <tbody style="text-align: center;">
-              <!-- Show content -->
               </tbody>
+
               <tfoot>
               <tr>
                 <th>ID</th>
@@ -116,27 +123,28 @@
                 <th>Usuario</th>
                 <th>Rol</th>
                 <th>Nombre</th>
-                <th>Apellido </th>
+                <th>Apellido</th>
                 <th>Correo</th>
                 <th>Teléfono</th>
                 <th>Fecha de creación</th>
               </tr>
               </tfoot>
+
             </table>
           </div>
 
           <!-- Card footer -->
-          <div class="card-footer silence silence-lightblue">
-            COLPOS
+          <div class="card-footer bg-gradient-info text-right sisreg-card-footer">
+            <em><?php echo SYSTEM_FULL_NAME; ?></em>
           </div>
-        
+
         </div>
-      
+
       </div>
     </div>
   </div>
 
-</section>
+</div>
 
 <!-- jQuery -->
 <script src="views/resources/plugins/jquery/jquery.min.js"></script>

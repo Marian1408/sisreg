@@ -63,6 +63,7 @@
       return $statement->fetchColumn();
     }
     
+    
     /**
      * Generic method that returns a record that matches the id passed as a parameter
      *

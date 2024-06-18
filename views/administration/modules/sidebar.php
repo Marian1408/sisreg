@@ -137,7 +137,7 @@
 
         <!-- Event logs options ------------------------------------------------------------------------------------------ -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'event'); ?>">
-        
+
           <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'event') ?> ">
             <i class="nav-icon fas fa-calendar-days"></i>
             <p>
@@ -145,8 +145,8 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          
-          
+
+
           <ul class="nav nav-treeview">
             
             
@@ -175,41 +175,40 @@
         </li>
 
 
-        <!-- Craft options ------------------------------------------------------------------------------------------ -->
-        <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'craft'); ?>">
-          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'craft') ?> ">
+        <!-- Documents --------------------------------------------------------------------------------------------- -->
+        <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'document'); ?>">
+          <a href="" class="nav-link <?php Functions::menuActive ('menuOpenedActive', $string, 'document') ?> ">
             <i class="nav-icon fas fa-solid fa-file-signature"></i>
             <p>
               <?php echo 'Oficios'; ?>
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
+
           <ul class="nav nav-treeview">
 
-            
-            <!-- Crafts /-->
+            <!-- Document list option /-->
             <li class="nav-item">
-              <a href="craftList"
-                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'craf') ?>">
+              <a href="documentList"
+                 class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'document') ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p><?php echo 'Lista de oficios'; ?></p>
               </a>
             </li>
 
-           
-            </li>
-
-          </ul>
         </li>
 
+      </ul>
+      </li>
 
-        <!-- About option ------------------------------------------------------------------------------------------ -->
-        <li class="nav-item">
-          <a href="about" class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'about') ?> ">
-            <i class="nav-icon fas fa-circle-info"></i>
-            <p><?php echo 'Acerca de..'; ?></p>
-          </a>
-        </li>
+
+      <!-- About option ------------------------------------------------------------------------------------------ -->
+      <li class="nav-item">
+        <a href="about" class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'about') ?> ">
+          <i class="nav-icon fas fa-circle-info"></i>
+          <p><?php echo 'Acerca de..'; ?></p>
+        </a>
+      </li>
 
       </ul>
 

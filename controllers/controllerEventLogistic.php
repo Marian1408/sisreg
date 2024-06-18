@@ -5,17 +5,111 @@
    * Project description: Survey System for the Postgraduate College
    * Version:             1.0.0
    * File type:           Controller
-   * File description:    Event controller
+   * File description:    Event Logistic Controller
    * Package:             Controllers
    * -------------------------------------------------------------------------------------------------------------------
    */
   
   require_once (dirname (__DIR__, 1) . '/includes/functions.php');
+  require_once (dirname (__DIR__, 1) . '/models/modelEventLogistic.php');
   require_once (dirname (__DIR__, 1) . '/models/modelEvent.php');
-  require_once (dirname (__DIR__, 1) . '/controllers/controllerEvent.php');
-  require_once (dirname (__DIR__, 1) . '/controllers/controllerUser.php');
-  require_once (dirname (__DIR__, 1) . '/controllers/controllerActivities.php');
-  require_once (dirname (__DIR__, 1) . '/controllers/controllerModality.php');
+  require_once (dirname (__DIR__, 1) . '/controllers/controllerEventLogistic.php');
+  
+  
+  if (isset($_POST['eventDataCheckId'])) {
+    
+    if (!isset($_POST['event_logistic_personal_rtd'])) {
+      $event_logistic_personal_rtd = '0';
+    } else {
+      $event_logistic_personal_rtd = '1';
+    }
+    if (!isset($_POST['event_logistic_personal_rtd'])) {
+      $event_logistic_personal_rtd = '0';
+    } else {
+      $event_logistic_personal_rtd = '1';
+    }
+    if (!isset($_POST['event_logistic_personal_rtss'])) {
+      $event_logistic_personal_rtss = '0';
+    } else {
+      $event_logistic_personal_rtss = '1';
+    }
+    if (!isset($_POST['event_logistic_personal_se'])) {
+      $event_logistic_personal_se = '0';
+    } else {
+      $event_logistic_personal_se = '1';
+    }
+    if (!isset($_POST['event_logistic_personal_rc'])) {
+      $event_logistic_personal_rc = '0';
+    } else {
+      $event_logistic_personal_rc = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_chairs'])) {
+      $event_logistic_auditorium_chairs = '0';
+    } else {
+      $event_logistic_auditorium_chairs = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_presidium'])) {
+      $event_logistic_auditorium_presidium = '0';
+    } else {
+      $event_logistic_auditorium_presidium = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_platform_data'])) {
+      $event_logistic_auditorium_platform_data = '0';
+    } else {
+      $event_logistic_auditorium_platform_data = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_id_data'])) {
+      $event_logistic_auditorium_id_data = '0';
+    } else {
+      $event_logistic_auditorium_id_data = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_staff_compliance'])) {
+      $event_logistic_auditorium_staff_compliance = '0';
+    } else {
+      $event_logistic_auditorium_staff_compliance = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_prepare_attendance_list'])) {
+      $event_logistic_auditorium_prepare_attendance_list = '0';
+    } else {
+      $event_logistic_auditorium_prepare_attendance_list = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_verify_support_staff'])) {
+      $event_logistic_auditorium_verify_support_staff = '0';
+    } else {
+      $event_logistic_auditorium_verify_support_staff = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_attendance_link'])) {
+      $event_logistic_auditorium_attendance_link = '0';
+    } else {
+      $event_logistic_auditorium_attendance_link = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_attendace_password_link'])) {
+      $event_logistic_auditorium_attendace_password_link = '0';
+    } else {
+      $event_logistic_auditorium_attendace_password_link = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_lift_tablecloths'])) {
+      $event_logistic_auditorium_lift_tablecloths = '0';
+    } else {
+      $event_logistic_auditorium_lift_tablecloths = '1';
+    }
+    if (!isset($_POST['event_logistic_auditorium_personifiers'])) {
+      $event_logistic_auditorium_personifiers = '0';
+    } else {
+      $event_logistic_auditorium_personifiers = '1';
+    }
+    
+    
+    $event_logistic_event_id = $_POST['eventDataCheckId'];
+    
+    $objectEvent = new ControllerEventLogistic();
+    
+    $columns = '(event_logistic_personal_rtd, event_logistic_personal_rtss, event_logistic_personal_se, event_logistic_personal_rc, event_logistic_auditorium_chairs, event_logistic_auditorium_presidium, event_logistic_auditorium_platform_data, event_logistic_auditorium_id_data, event_logistic_auditorium_staff_compliance, event_logistic_auditorium_prepare_attendance_list, event_logistic_auditorium_verify_support_staff, event_logistic_auditorium_attendance_link, event_logistic_auditorium_attendace_password_link, event_logistic_auditorium_lift_tablecloths, event_logistic_auditorium_personifiers, event_logistic_event_id)';
+    
+    $data = " ('$event_logistic_personal_rtd','$event_logistic_personal_rtss','$event_logistic_personal_se','$event_logistic_personal_rc','$event_logistic_auditorium_chairs','$event_logistic_auditorium_presidium','$event_logistic_auditorium_platform_data','$event_logistic_auditorium_id_data','$event_logistic_auditorium_staff_compliance','$event_logistic_auditorium_prepare_attendance_list','$event_logistic_auditorium_verify_support_staff','$event_logistic_auditorium_attendance_link','$event_logistic_auditorium_attendace_password_link','$event_logistic_auditorium_lift_tablecloths','$event_logistic_auditorium_personifiers','$event_logistic_event_id') ";
+    $result = $objectEvent->insertEvent ($columns, $data);
+    echo $result;
+  }
   
   
   # ADD new event via AJAX for DataTable
@@ -154,18 +248,10 @@
     echo $result;
   }
   
-  if (!empty($_FILES['customFile']['name'])) {
-    $response = $_FILES['customFile']['name'];
-    $nombre_archivo = $_FILES['customFile']['name'];
-    $ruta_temporal_archivo = $_FILES['customFile']['tmp_name'];
-    //$name = $_POST['inputUsername'];
-    echo $ruta_temporal_archivo;
-  }
   
-  
-  # GET ALL event via AJAX for DataTable
+  # GET ALL event logistic via AJAX for DataTable
   if (isset($_GET['getAllDataEvent'])) {
-    ControllerEvent::getAllEventsForDataTables ();
+    ControllerEventLogistic::getAllEventsLogisticForDataTables ();
   }
   
   # DELETE user via Ajax for DataTable
@@ -189,19 +275,19 @@
   /**
    * User controller class
    */
-  class ControllerEvent
+  class ControllerEventLogistic
   {
-    private ModelEvent $model;
+    private ModelEventLogistic $model;
     
     /**
      * User Controller Constructor
      */
     function __construct ()
     {
-      $this->model = new ModelEvent();
+      $this->model = new ModelEventLogistic();
     }
     
-    function insertEvent ($dataColumns, $data): array|bool
+    function insertEvent ($dataColumns, $data): int|bool
     {
       return $this->model->insertData ($dataColumns, $data);
     }
@@ -254,176 +340,59 @@
      *
      * @return void
      */
-    static function getAllEventsForDataTables (): void
+    static function getAllEventsLogisticForDataTables (): void
     {
+      $eventLogisticObject = new ModelEventLogistic();
       $eventObject = new ModelEvent();
-      $userNameObject = new ControllerUser();
-      $activityObject = new ControllerActivities();
-      $modalityObject = new ControllerModality();
+      // $userNameObject = new ControllerUser();
+      // $activityObject = new ControllerActivities();
+      // $modalityObject = new ControllerModality();
       
-      $queryResult = $eventObject->getAllEventsDataTableFormat ();
+      $queryResult = $eventLogisticObject->getAllEventsLogisticDataTableFormat ();
       $data_array = array();
       
       # The data is sorted to create a new array
       while ($data = $queryResult->fetch_object ()) {
         $data_array[] = array(
-          $data->event_id,                                                    // [0] | Id
-          $data->event_name_of_activity,                                      // [1] | Name of activity
-          $data->event_id,                                                    // [2] | Tools
-          $data->event_activity_type1,                                        // [3] | Activity 1
-          $data->event_activity_type2,                                        // [4] | Activity 2
-          $data->event_activity_type3,                                        // [5] | Activity 3
-          $data->event_modality,                                              // [6] | Modality
-          
-          $data->event_action_1_action_numbers,                               // [7] |
-          $data->event_action_1_trained_people,                               // [8] |
-          $data->event_action_1_number_hours,                                 // [9] |
-          
-          $data->event_action_2_action_numbers,                               // [10] |
-          $data->event_action_2_trained_people,                               // [11] |
-          $data->event_action_2_number_hours,                                 // [12] |
-          
-          $data->event_action_3_action_numbers,                               // [13] |
-          $data->event_action_3_trained_people,                               // [14] |
-          $data->event_action_3_number_hours,                                 // [15] |
-          
-          $data->event_action_4_action_numbers,                               // [16] |
-          $data->event_action_4_trained_people,                               // [17] |
-          $data->event_action_4_number_hours,                                 // [18] |
-          
-          $data->event_action_5_action_numbers,                               // [19] |
-          $data->event_action_5_trained_people,                               // [20] |
-          $data->event_action_5_number_hours,                                 // [21] |
-          
-          $data->event_action_6_action_numbers,                               // [22] |
-          $data->event_action_6_trained_people,                               // [23] |
-          $data->event_action_6_number_hours,                                 // [24] |
-          
-          $data->event_action_7_action_numbers,                               // [25] |
-          $data->event_action_7_trained_people,                               // [26] |
-          $data->event_action_7_number_hours,                                 // [27] |
-          
-          $data->event_action_8_action_numbers,                               // [28] |
-          $data->event_action_8_trained_people,                               // [29] |
-          $data->event_action_8_number_hours,                                 // [30] |
-          
-          $data->event_action_9_action_numbers,                               // [31] |
-          $data->event_action_9_trained_people,                               // [32] |
-          $data->event_action_9_number_hours,                                 // [33] |
-          
-          $data->event_action_10_action_numbers,                              // [34] |
-          $data->event_action_10_trained_people,                              // [35] |
-          $data->event_action_10_number_hours,                                // [36] |
-          
-          $data->event_technology_manager_manager,                            // [37] |
-          $data->event_manager_social_service,                                // [38] |
-          $data->event_event_requester,                                       // [39] |
-          $data->event_input_portfolio_manager,                               // [40] |
-          $data->event_name_magistrate,                                       // [41] |
-          
-          $data->event_date_event_date,                                       // [42] |
-          $data->event_date_folder_assignment_date,                           // [43] |
-          $data->event_date_delivery_date_administrative_letters_signature,   // [44] |
-          $data->event_date_acknowledgment_delivery_date_signature,           // [45] |
-          $data->event_date_making_poster_dissemination,                      // [46] |
-          $data->event_date_delivery_date_administrative_offices,             // [47] |
-          $data->event_date_creation_opening_registrations_platform_course,   // [48] |
-          $data->event_date_send_calls_before_validating,                     // [49] |
-          $data->event_date_delivery_concentrates_certificates_validation,    // [50] |
-          $data->event_date_folder_delivery_date,                             // [51] |
-          
-          $data->event_date_concentrates_records_validation,                  // [52] |
-          $data->event_date_integrated_folder_delivery,                       // [53] |
-          $data->event_date_empty_data_into_excel_file,                       // [54] |
-          $data->event_date_clear_information_from_trained,                   // [55] |
-          
-          $data->event_last_change_date,                                      // [56] |
-          $data->event_creation_date                                          // [57] |
+          $data->event_logistic_id,
+          $data->event_logistic_event_id,
+          $data->event_logistic_personal_rtd,
+          $data->event_logistic_personal_rtss,
+          $data->event_logistic_personal_se,
+          $data->event_logistic_personal_rc,
+          $data->event_logistic_auditorium_chairs,
+          $data->event_logistic_auditorium_presidium,
+          $data->event_logistic_auditorium_platform_data,
+          $data->event_logistic_auditorium_id_data,
+          $data->event_logistic_auditorium_staff_compliance,
+          $data->event_logistic_auditorium_prepare_attendance_list,
+          $data->event_logistic_auditorium_verify_support_staff,
+          $data->event_logistic_auditorium_attendance_link,
+          $data->event_logistic_auditorium_attendace_password_link,
+          $data->event_logistic_auditorium_lift_tablecloths,
+          $data->event_logistic_auditorium_personifiers,
+          $data->event_logistic_date_creation
         );
       }
       
+      # Add name [1]
       foreach ($data_array as $index => $item) {
-        $data_array[$index][2] = '
-        
-          <div class="btn-group">
-           
-           <!-- View button -->
-           <form action="eventDetails" method="post" id="formButtonEventView">
-              <input  type="hidden"
-                      name="eventData"
-                      id="eventData"
-                      value=" ' . $data_array[$index][2] . '" >
-              <button type="submit"
-                      class="btn btn-primary btn-flat cltm-tools-buttons"
-                      title="Ver evento">
-                <i class="fas fa-regular fa-eye"></i>
-              </button>
-            </form>
-            
-          </div>
-          
-                    <div class="btn-group">
-           
-           <!-- View button -->
-           <form action="eventCheckEvent" method="post" id="formButtonEventView">
-              <input  type="hidden"
-                      name="eventDataCheckId"
-                      id="eventDataCheckId"
-                      value=" ' . $data_array[$index][2] . '" >
-              <button type="submit"
-                      class="btn btn-warning btn-flat cltm-tools-buttons"
-                      title="Checar evento">
-                <i class="fas fa-solid fa-check-double"></i>
-              </button>
-            </form>
-            
-          </div>
-        ';
+        $id = $data_array[$index][1];
+        $dataEvent = $eventObject->getById ($id);
+        $data_array[$index][1] = $dataEvent['event_name_of_activity'];
       }
       
       
-      # Add name [3]
+      # Add name [2]
       foreach ($data_array as $index => $item) {
-        $activityName = $activityObject->getActivityName ('1', $item[3]);
-        $data_array[$index][3] = $activityName;
+        for ($i=2; $i<=16; $i++){
+          if($data_array[$index][$i] == '0'){
+            $data_array[$index][$i] = 'No cumplió';
+          }else {
+            $data_array[$index][$i] = 'Si cumplió';
+          }
+        }
       }
-      
-      # Add name [4]
-      foreach ($data_array as $index => $item) {
-        $activityName = $activityObject->getActivityName ('2', $item[4]);
-        $data_array[$index][4] = $activityName;
-      }
-      
-      # Add name [5]
-      foreach ($data_array as $index => $item) {
-        $activityName = $activityObject->getActivityName ('3', $item[5]);
-        $data_array[$index][5] = $activityName;
-      }
-      
-      # Add name [6]
-      foreach ($data_array as $index => $item) {
-        $modalityName = $modalityObject->getModalityName ($item[6]);
-        $data_array[$index][6] = $modalityName;
-      }
-      
-      # Add name [37]
-      foreach ($data_array as $index => $item) {
-        $userName = $userNameObject->getUserName ($item[37]);
-        $data_array[$index][37] = $userName;
-      }
-      
-      # Add name [38]
-      foreach ($data_array as $index => $item) {
-        $userName = $userNameObject->getUserName ($item[38]);
-        $data_array[$index][38] = $userName;
-      }
-      
-      # Add name [40]
-      foreach ($data_array as $index => $item) {
-        $userName = $userNameObject->getUserName ($item[40]);
-        $data_array[$index][40] = $userName;
-      }
-      
       
       # An array is created with the data ordered and prepared for the table
       $new_array = array("data" => $data_array);
