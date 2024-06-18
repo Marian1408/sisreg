@@ -27,7 +27,7 @@
 
   <!-- Left navbar /-->
   <ul class="navbar-nav">
-    
+
     <!-- Collapse sidebar button -->
     <li class="nav-item">
       <a class="nav-link"
@@ -90,26 +90,29 @@
       </div>
 
     </li>
-
-    <!-- Events menu -->
-    <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#" title="Notificaciones">
-        <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">
+    
+    
+    <?php if ($_SESSION['user_role_id'] == 3): ?>
+      <!-- Events menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#" title="Notificaciones">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">
           <?php echo $eventsTotal; ?>
         </span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <span class="dropdown-item dropdown-header"> <?php echo $eventsTotal; ?> Eventos</span>
-        
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-calendar-days mr-2"></i> 4 eventos asignados
-          <span class="float-right text-muted text-sm">3 mins</span>
         </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"><?php echo $eventsTotal; ?>  Eventos</span>
 
-      </div>
-    </li>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-calendar-days mr-2"></i> <?php echo $eventsTotal; ?> eventos asignados
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+
+        </div>
+      </li>
+    <?php endif; ?>
 
     <!-- Fullscreen button -->
     <li class="nav-item">

@@ -41,13 +41,9 @@
     $columns = '(user_username, user_password, 	user_name, user_role,
     user_mail, user_phone, user_description, user_date_last_change, user_image)';
     
-
     $result = $objectUser->insertUser ($columns, $data);
     echo $result;
-    
   }
-  
-  
   
   
   /***
