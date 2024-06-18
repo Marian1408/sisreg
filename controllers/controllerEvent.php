@@ -28,45 +28,45 @@
     $selectActivityType3 = $_POST['selectActivityType3'];
     $selectModality = $_POST['selectModality'];
     
-    $action1ActionNumbers = checkActions ($_POST['action1ActionNumbers']);
-    $action1TrainedPeople = checkActions ($_POST['action1TrainedPeople']);
-    $action1NumberHours = checkActions ($_POST['action1NumberHours']);
+    $action1ActionNumbers = checkActions_ ($_POST['action1ActionNumbers']);
+    $action1TrainedPeople = checkActions_ ($_POST['action1TrainedPeople']);
+    $action1NumberHours = checkActions_ ($_POST['action1NumberHours']);
     
-    $action2ActionNumbers = checkActions ($_POST['action2ActionNumbers']);
-    $action2TrainedPeople = checkActions ($_POST['action2TrainedPeople']);
-    $action2NumberHours = checkActions ($_POST['action2NumberHours']);
+    $action2ActionNumbers = checkActions_ ($_POST['action2ActionNumbers']);
+    $action2TrainedPeople = checkActions_ ($_POST['action2TrainedPeople']);
+    $action2NumberHours = checkActions_ ($_POST['action2NumberHours']);
     
-    $action3ActionNumbers = checkActions ($_POST['action3ActionNumbers']);
-    $action3TrainedPeople = checkActions ($_POST['action3TrainedPeople']);
-    $action3NumberHours = checkActions ($_POST['action3NumberHours']);
+    $action3ActionNumbers = checkActions_ ($_POST['action3ActionNumbers']);
+    $action3TrainedPeople = checkActions_ ($_POST['action3TrainedPeople']);
+    $action3NumberHours = checkActions_ ($_POST['action3NumberHours']);
     
-    $action4ActionNumbers = checkActions ($_POST['action4ActionNumbers']);
-    $action4TrainedPeople = checkActions ($_POST['action4TrainedPeople']);
-    $action4NumberHours = checkActions ($_POST['action4NumberHours']);
+    $action4ActionNumbers = checkActions_ ($_POST['action4ActionNumbers']);
+    $action4TrainedPeople = checkActions_ ($_POST['action4TrainedPeople']);
+    $action4NumberHours = checkActions_ ($_POST['action4NumberHours']);
     
-    $action5ActionNumbers = checkActions ($_POST['action5ActionNumbers']);
-    $action5TrainedPeople = checkActions ($_POST['action5TrainedPeople']);
-    $action5NumberHours = checkActions ($_POST['action5NumberHours']);
+    $action5ActionNumbers = checkActions_ ($_POST['action5ActionNumbers']);
+    $action5TrainedPeople = checkActions_ ($_POST['action5TrainedPeople']);
+    $action5NumberHours = checkActions_ ($_POST['action5NumberHours']);
     
-    $action6ActionNumbers = checkActions ($_POST['action6ActionNumbers']);
-    $action6TrainedPeople = checkActions ($_POST['action6TrainedPeople']);
-    $action6NumberHours = checkActions ($_POST['action6NumberHours']);
+    $action6ActionNumbers = checkActions_ ($_POST['action6ActionNumbers']);
+    $action6TrainedPeople = checkActions_ ($_POST['action6TrainedPeople']);
+    $action6NumberHours = checkActions_ ($_POST['action6NumberHours']);
     
-    $action7ActionNumbers = checkActions ($_POST['action7ActionNumbers']);
-    $action7TrainedPeople = checkActions ($_POST['action7TrainedPeople']);
-    $action7NumberHours = checkActions ($_POST['action7NumberHours']);
+    $action7ActionNumbers = checkActions_ ($_POST['action7ActionNumbers']);
+    $action7TrainedPeople = checkActions_ ($_POST['action7TrainedPeople']);
+    $action7NumberHours = checkActions_ ($_POST['action7NumberHours']);
     
-    $action8ActionNumbers = checkActions ($_POST['action8ActionNumbers']);
-    $action8TrainedPeople = checkActions ($_POST['action8TrainedPeople']);
-    $action8NumberHours = checkActions ($_POST['action8NumberHours']);
+    $action8ActionNumbers = checkActions_ ($_POST['action8ActionNumbers']);
+    $action8TrainedPeople = checkActions_ ($_POST['action8TrainedPeople']);
+    $action8NumberHours = checkActions_ ($_POST['action8NumberHours']);
     
-    $action9ActionNumbers = checkActions ($_POST['action9ActionNumbers']);
-    $action9TrainedPeople = checkActions ($_POST['action9TrainedPeople']);
-    $action9NumberHours = checkActions ($_POST['action9NumberHours']);
+    $action9ActionNumbers = checkActions_ ($_POST['action9ActionNumbers']);
+    $action9TrainedPeople = checkActions_ ($_POST['action9TrainedPeople']);
+    $action9NumberHours = checkActions_ ($_POST['action9NumberHours']);
     
-    $action10ActionNumbers = checkActions ($_POST['action10ActionNumbers']);
-    $action10TrainedPeople = checkActions ($_POST['action10TrainedPeople']);
-    $action10NumberHours = checkActions ($_POST['action10NumberHours']);
+    $action10ActionNumbers = checkActions_ ($_POST['action10ActionNumbers']);
+    $action10TrainedPeople = checkActions_ ($_POST['action10TrainedPeople']);
+    $action10NumberHours = checkActions_ ($_POST['action10NumberHours']);
     
     $selectTechnologyManagerManager = $_POST['selectTechnologyManagerManager'];
     $selectManagerSocialService = $_POST['selectManagerSocialService'];
@@ -175,7 +175,7 @@
   }
   
   
-  function checkActions ($action)
+  function checkActions_ ($action)
   {
     if (!empty($action)) {
       return $action;
@@ -367,8 +367,8 @@
            <!-- View button -->
            <form action="eventCheckEvent" method="post" id="formButtonEventView">
               <input  type="hidden"
-                      name="eventDataCheckId"
-                      id="eventDataCheckId"
+                      name="eventCheckEventId"
+                      id="eventCheckEventId"
                       value=" ' . $data_array[$index][2] . '" >
               <button type="submit"
                       class="btn btn-warning btn-flat cltm-tools-buttons"

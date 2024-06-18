@@ -309,9 +309,9 @@
       return $this->model->getAll ();
     }
     
-    function getById ($id): int|bool|array
+    function getByIdEvent ($id): int|bool|array
     {
-      return $this->model->getById ($id);
+      return $this->model->getByIdEvent ($id);
     }
     
     /**

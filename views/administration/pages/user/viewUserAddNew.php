@@ -210,7 +210,7 @@
                           <!-- Title -->
                           <h5 class="card-title">
                             <i class="fas fa-person-circle-question"></i>
-                            <b>Datos principales</b>
+                            <b>Datos secundarios</b>
                           </h5>
 
                         </div>
@@ -322,18 +322,18 @@
 
                   </div>
 
-
+                  <!-- Add button -->
+                  <button class="btn btn-primary ml-0 mb-2"
+                          type="submit"
+                          id="buttonAddNew"
+                          name="buttonAddNew"
+                          disabled
+                          title="Añadir evento">
+                    <i class="fa-solid fa-floppy-disk"></i> Añadir usuario
+                  </button>
                 </div>
 
-                <!-- Add button -->
-                <button class="btn btn-primary ml-4 mb-2"
-                        type="submit"
-                        id="buttonAddNew"
-                        name="buttonAddNew"
-                        disabled
-                        title="Añadir evento">
-                  <i class="fa-solid fa-floppy-disk"></i> Añadir usuario
-                </button>
+    
 
 
               </div>

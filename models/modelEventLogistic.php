@@ -44,6 +44,15 @@
       return parent::insert ($dataColumns, $data);
     }
     
+    
+    public function getByIdEvent ($id): bool|array
+    {
+      $sql = " SELECT * FROM {$this->table} WHERE event_logistic_event_id ='$id' ";
+      $statement = $this->connectionPDO->prepare ($sql);
+      $statement->execute ();
+      return $statement->fetch ();
+    }
+    
     public function getAllEventsLogisticTotalWithUserId ($id): bool|int
     {
       $sql = " SELECT COUNT(*) FROM {$this->table} WHERE event_technology_manager_manager = '$id' OR event_manager_social_service = '$id' OR event_input_portfolio_manager = '$id'";

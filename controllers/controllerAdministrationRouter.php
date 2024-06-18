@@ -97,7 +97,7 @@
           $this->eventCheckEvent ();
           break;
         
-        case ($nameOfView === 'viewEventCheckViewAll'):
+        case ($nameOfView === 'eventCheckViewAll'):
           $this->viewEventCheckViewAll ();
           break;
         

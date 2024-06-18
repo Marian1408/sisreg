@@ -150,13 +150,21 @@
           <ul class="nav nav-treeview">
             
             
-            <?php if ($_SESSION['user_role_name'] == 'Administrador'): ?>
+            <?php if ($_SESSION['user_role_id'] != 3): ?>
               <!-- Event View All Option -->
               <li class="nav-item">
                 <a href="eventAllEvents"
                    class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventAllEvents') ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?php echo 'Ver eventos'; ?></p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="eventCheckViewAll"
+                   class="nav-link <?php Functions::menuActive ('menuActiveItem', $string, 'eventCheckViewAll') ?>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p><?php echo 'Eventos chequeados'; ?></p>
                 </a>
               </li>
 
