@@ -19,7 +19,7 @@
   # ADD new user via AJAX for DataTable
   if (isset($_POST['inputUserName'])) {
     
-    $inputUsername = $_POST['inputUsername'];
+    $inputUsername = $_POST['inputUserName'];
     $inputPassword = md5($_POST['inputPassword']);
     $inputName = $_POST['inputName'];
     $selectRole = $_POST['selectRole'];

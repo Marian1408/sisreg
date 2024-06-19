@@ -133,8 +133,8 @@
 
           </ul>
         </li>
-
-
+        
+        <?php if ($_SESSION['user_role_id'] != 3): ?>
         <!-- Event logs options ------------------------------------------------------------------------------------------ -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'event'); ?>">
 
@@ -150,7 +150,7 @@
           <ul class="nav nav-treeview">
             
             
-            <?php if ($_SESSION['user_role_id'] != 3): ?>
+            
               <!-- Event View All Option -->
               <li class="nav-item">
                 <a href="eventAllEvents"
@@ -177,11 +177,11 @@
                 </a>
               </li>
             
-            <?php endif; ?>
+            
 
           </ul>
         </li>
-
+        <?php endif; ?>
 
         <!-- Documents --------------------------------------------------------------------------------------------- -->
         <li class="nav-item <?php Functions::menuActive ('menuOpened', $string, 'document'); ?>">

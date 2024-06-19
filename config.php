@@ -33,7 +33,7 @@
   date_default_timezone_set ("America/Mexico_City");
   
   # Database connection values
-  const DB_HOSTNAME = 'localhost:3307'; // Hostname
+  const DB_HOSTNAME = 'localhost:3306'; // Hostname
   const DB_NAME = 'sisreg'; // Database name
   const DB_USERNAME = 'root'; // Username of database connection
-  const DB_PASSWORD = ''; // Password of database connection
+  const DB_PASSWORD = ''; // Password of database connection /// marina

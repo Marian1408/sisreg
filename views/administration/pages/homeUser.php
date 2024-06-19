@@ -152,23 +152,38 @@
                               </small>';
                           ?>
 
-                          <span class="text">           <form action="eventDetails" method="post" id="formButtonEventView">
+                          <span class="text">
+                            <form action="eventDetails"
+                                  method="post"
+                                  id="formButtonEventView">
                             <input type="hidden"
                                    name="eventData"
                                    id="eventData"
                                    value="<?php echo $row["event_id"]; ?>">
-                       
                               <button type="submit"
                                       class="btn btn btn-flat "
                                       title="Ver evento">
                                 <i class="fas fa-regular fa-eye"></i>
                               </button>
-                          </form></span>
-                          
-                          <!-- General tools such as edit or delete-->
-                
-                          
-                     
+                            </form>
+                          </span>
+
+                          <span class="text">
+                            <form action="eventCheckCheckUser"
+                                  method="post"
+                                  id="formButtonEventView">
+                            <input type="hidden"
+                                   name="eventData"
+                                   id="eventData"
+                                   value="<?php echo $row["event_id"]; ?>">
+                              <button type="submit"
+                                      class="btn btn btn-flat "
+                                      title="Ver evento">
+                                <i class="fa-solid fa-list-check"></i>
+                              </button>
+                            </form>
+                          </span>
+
 
                         </li>
                       

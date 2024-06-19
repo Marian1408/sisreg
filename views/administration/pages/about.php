@@ -168,7 +168,7 @@
               </h5>
               <hr>
               <ul>
-                <li class="cltm-li"><a class="cltm-callout" href="github.com/gcamarenaprog/cltm">Version 1.0.0 | May
+                <li class="cltm-li"><a class="cltm-callout">Version 1.0.0 | May
                     2024</a></li>
               </ul>
             </div>

@@ -283,7 +283,7 @@
   function modalErrorDeleteUserAdmin() {
     Swal.fire({
       icon: "error",
-      title: "¡Error al eliminar usuario!",
+      title: "¡No Puedes Borrar el administrador!",
       text: "¡No se puede eliminar un usuario de tipo administrador!",
       confirmButtonColor: "#007bff",
     });
@@ -296,8 +296,8 @@
    */
   function modalSuccessfulDeleteUser(username) {
     Swal.fire({
-      title: ' ¡Error al eliminar usuario! ',
-      text: ' No se pudo eliminar el usuario ' + username,
+      title: ' ¡Elimininacion correctamente! ',
+      text: ' Se elimino el usuario ' + username,
       icon: 'success',
       confirmButtonColor: '#3085d6'
     })

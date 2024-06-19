@@ -101,6 +101,10 @@
           $this->viewEventCheckViewAll ();
           break;
         
+        case ($nameOfView === 'eventCheckUser'):
+          $this->eventCheckUser ();
+          break;
+        
         
         case ($nameOfView === 'userViewAllUsers'):
           $this->userViewAll ();
@@ -108,10 +112,6 @@
         
         case ($nameOfView === 'userAddUser'):
           $this->userAddNew ();
-          break;
-        
-        case ($nameOfView === 'userEdit'):
-          $this->userEdit ();
           break;
         
         case ($nameOfView === 'userViewProfile'):
@@ -200,17 +200,8 @@
     {
       include "views/administration/pages/user/viewUserAddNew.php";
     }
-    
-    /**
-     * Load the user edit view
-     *
-     * @return void
-     */
-    private function userEdit (): void
-    {
-      include "views/administration/pages/user/viewUserEdit.php";
-    }
-    
+  
+  
     /**
      * Load the user view profile view
      *
@@ -272,6 +263,18 @@
     {
       include "views/administration/pages/event/viewEventCheckViewAll.php";
     }
+    
+    /**
+     * Load event check view all view
+     *
+     * @return void
+     */
+    private function eventCheckUser (): void
+    {
+      include "views/administration/pages/event/viewEventCheckUser.php";
+    }
+  
+  
     
     
     /**
